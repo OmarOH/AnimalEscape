@@ -717,6 +717,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1357246072}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &164570374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 164570376}
+  - component: {fileID: 164570375}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &164570375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164570374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &164570376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164570374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.48, y: -1.91, z: 89.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &166749560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5665,21 +5709,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1669891837, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
-      propertyPath: m_Radius
-      value: 0.12636441
-      objectReference: {fileID: 0}
-    - target: {fileID: 1669891837, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
-      propertyPath: m_Center.y
-      value: 0.08735019
-      objectReference: {fileID: 0}
-    - target: {fileID: 1669891837, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
-      propertyPath: m_Center.z
-      value: 0.024526179
-      objectReference: {fileID: 0}
     - target: {fileID: 1877940962996312, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
       propertyPath: m_Name
       value: Pig
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877940962996312, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4732159139638968, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
       propertyPath: m_RootOrder
