@@ -4,18 +4,32 @@ using UnityEngine;
 
 public class JoystickPlayerExample : MonoBehaviour
 {
+    [SerializeField] private GameObject pigObject;
+
+    private Vector3 oldDirection;
+
     public float speed;
     public FloatingJoystick floatingJoystick;
     public Rigidbody rb;
-
+    private void Start()
+    {
+        oldDirection = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
+    }
     public void FixedUpdate()
     {
-        Vector3 direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
-        rb.velocity = direction * speed;
-    }
-    public Vector3 GetDirection()
-    {
-        Vector3 directon = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
-        return directon;
+        Vector3 direction;
+        if (Input.GetMouseButton(0)) {
+            Debug.Log("AHAGFYHA");
+            direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
+            rb.velocity = direction * speed;
+
+            oldDirection = direction;
+        } else
+        {
+            direction = oldDirection;
+            rb.velocity = Vector3.zero;
+        }
+        direction = direction.normalized;
+        pigObject.transform.rotation = Quaternion.LookRotation(direction);
     }
 }

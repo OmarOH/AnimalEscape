@@ -31,6 +31,54 @@ Transform:
   m_Father: {fileID: 6346315193079544501}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1949904229209972838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4426725273192989729}
+  - component: {fileID: 2506092224143309093}
+  m_Layer: 0
+  m_Name: Rotating object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4426725273192989729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949904229209972838}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6346315194024828414}
+  m_Father: {fileID: 6346315193079544501}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2506092224143309093
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949904229209972838}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1 &3724239448095371978
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +521,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 6346315192092196295}
-  - {fileID: 6346315194024828414}
+  - {fileID: 4426725273192989729}
   - {fileID: 1260258072290745442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -538,6 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bd53b83d6f57b42aaaa3ea8b0c838e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pigObject: {fileID: 1949904229209972838}
   speed: 6
   floatingJoystick: {fileID: 0}
   rb: {fileID: 6346315193079544507}
@@ -844,14 +893,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6346315194024828415}
   m_LocalRotation: {x: 0.052289426, y: 0.7051708, z: 0.052289426, w: 0.7051708}
-  m_LocalPosition: {x: 0, y: 0.10354388, z: -0.04775148}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.4141755, z: -0.19100592}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 6346315192844590269}
   - {fileID: 6346315193658222740}
   - {fileID: 6346315193988703780}
-  m_Father: {fileID: 6346315193079544501}
-  m_RootOrder: 1
+  m_Father: {fileID: 4426725273192989729}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6346315194039204112
 GameObject:
