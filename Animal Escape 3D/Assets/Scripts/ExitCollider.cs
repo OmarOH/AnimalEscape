@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ExitCollider : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            //Win logic
-            Debug.Log("Pasta");     
+            GameEvents.current.GameWon();
         }
     }
 }
