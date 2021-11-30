@@ -11,10 +11,13 @@ public class FarmerChase : MonoBehaviour
 
     GameObject player;
 
+    MovementAnimations ani;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        ani = gameObject.GetComponent<MovementAnimations>();
         InvokeRepeating("SetDestination", 1f, 0.1f);
     }
 
@@ -22,6 +25,7 @@ public class FarmerChase : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            ani.SetAnimation(gameObject, "Run");
             isChasing = true;
         }
     }
@@ -48,6 +52,8 @@ public class FarmerChase : MonoBehaviour
 
     private void Jump()
     {
-        agent.speed = 10f;
+        ani.SetAnimation(gameObject, "Jump");
+        agent.speed = 6f;
     }
+
 }
