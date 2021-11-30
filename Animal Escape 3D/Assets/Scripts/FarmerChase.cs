@@ -5,22 +5,17 @@ using UnityEngine.AI;
 
 public class FarmerChase : MonoBehaviour
 {
-    public Vector3 targetPosition;
-    public bool isChasing = false;
+    Vector3 targetPosition;
+    bool isChasing = false;
     public NavMeshAgent agent;
 
-    public GameObject player;
+    GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        InvokeRepeating("SetDestination", 1f, 1f);
-    }
-
-    private void FixedUpdate()
-    {
-        
+        InvokeRepeating("SetDestination", 1f, 0.1f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,6 +32,21 @@ public class FarmerChase : MonoBehaviour
         {
             targetPosition = player.transform.position;
             agent.destination = targetPosition;
+            CheckInJumpDistance();
         }
+    }
+
+    private void CheckInJumpDistance()
+    {
+        float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
+        if (dist <= 5f)
+        {
+            Jump();
+        }
+    }
+
+    private void Jump()
+    {
+        agent.speed = 10f;
     }
 }
