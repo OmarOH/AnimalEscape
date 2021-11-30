@@ -10,6 +10,7 @@ public class ExitCollider : MonoBehaviour
         if (other.tag == "Player")
         {
             //Win logic
+            Debug.Log("Pasta");     
         }
     }
 }
