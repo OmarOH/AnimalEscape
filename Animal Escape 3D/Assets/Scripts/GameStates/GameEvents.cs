@@ -20,4 +20,13 @@ public class GameEvents : MonoBehaviour
             finishTrigger();
         }
     }
+
+    public event Action caught;
+    public void GameOver()
+    {
+        if (caught != null)
+        {
+            caught();
+        }
+    }
 }
