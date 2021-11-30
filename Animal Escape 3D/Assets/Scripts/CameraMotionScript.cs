@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class CameraMotionScript : MonoBehaviour
 {
-    [SerializeField] private Transform GameFinnishTarget;
     [SerializeField] private Transform player;
-    [SerializeField] private Vector3 offset;
+    [SerializeField] private Transform endGoalTarget;
+    [Range(0, 360)]
+    [SerializeField] private int rotation;
+
+    private GameObject cameraObject;
     private void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + 8.0f, player.position.z + 7.0f);
+        cameraObject = GetComponentInChildren<Camera>().gameObject;
     }
     private void FixedUpdate()
     {
-        //Make sure the camera is always above the player
-        //Vector3 desiredPosition = playerTransform.position + Vector3.up * offset.y;
-        //transform.position = desiredPosition;
-
         //Make sure the player is always looking at the level finnish
-        transform.LookAt(GameFinnishTarget.position);
+        //cameraObject.transform.LookAt(endGoalTarget.position);
+        
+        Vector3 directionEnd = player.position - endGoalTarget.position;
+        directionEnd = directionEnd.normalized;
+        Debug.Log(directionEnd);
+        transform.localRotation = new Quaternion(0, 0, directionEnd.z, 0);
+        /*if () {
+            cameraObject.transform.RotateAround(transform.position, Vector3.up, rotation);
+        }*/
+        transform.Rotate(0f, rotation, 0f, Space.World);
     }
 }
