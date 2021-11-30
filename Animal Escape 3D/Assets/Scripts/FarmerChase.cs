@@ -42,6 +42,7 @@ public class FarmerChase : MonoBehaviour
         if (dist <= 5f)
         {
             Jump();
+            isChasing = false;
         }
     }
 
