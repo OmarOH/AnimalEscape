@@ -14,6 +14,7 @@ public class MovementAnimations : MonoBehaviour
 
     void Update()
     {
+        ;/*
         if(Mathf.Abs(rb.velocity.magnitude) > 0f && Mathf.Abs(rb.velocity.magnitude) <= 2f)
         {
             SetAnimation(gameObject, "Walk");
@@ -26,7 +27,7 @@ public class MovementAnimations : MonoBehaviour
         {
             SetAnimation(gameObject, "Idle");
         }
-
+        */
     }
 
     public void SetAnimation(GameObject animObj, string boolName)
