@@ -82,7 +82,7 @@ public class PlayerControleScript : MonoBehaviour
     }
     private IEnumerator jumpTimer()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.5f);
         isjumping = false;
         yield return null;
     }
