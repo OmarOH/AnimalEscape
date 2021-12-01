@@ -5791,11 +5791,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LastFarmer
       objectReference: {fileID: 0}
-    - target: {fileID: 2080373227347366666, guid: 973bf25e181ab9a42864d2ce89bf57a0,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973bf25e181ab9a42864d2ce89bf57a0, type: 3}
 --- !u!1001 &1253364414
@@ -5805,6 +5800,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1669891836, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: b8894f9761805a149858d6e97062e43d,
+        type: 2}
+    - target: {fileID: 1669891837, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 1877940962996312, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
       propertyPath: m_Name
       value: Pig
