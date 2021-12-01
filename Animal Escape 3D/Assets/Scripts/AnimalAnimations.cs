@@ -6,7 +6,6 @@ public class AnimalAnimations : MonoBehaviour
 {
     [SerializeField] private MovementAnimations animator;
     [SerializeField] private Rigidbody rigidbody;
-    [SerializeField] private ParticleSystem walkingParticles;
 
     // Update is called once per frame
     void Update()
@@ -14,12 +13,10 @@ public class AnimalAnimations : MonoBehaviour
         if(Mathf.Abs(rigidbody.velocity.magnitude) > 4.5f)
         {
             animator.SetAnimation(gameObject, "Run");
-            walkingParticles.Play();
         }
         if(Mathf.Abs(rigidbody.velocity.magnitude) >= 3.7f && Mathf.Abs(rigidbody.velocity.magnitude) <= 4.5f)
         {
             animator.SetAnimation(gameObject, "Walk");
-            walkingParticles.Play();
         }
         if(Mathf.Abs(rigidbody.velocity.magnitude) < 3.6f)
         {

@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4521093586459945095}
-  - component: {fileID: 653465823162203377}
-  - component: {fileID: 5120713023363282570}
   m_Layer: 0
   m_Name: PhysicalObject
   m_TagString: Untagged
@@ -35,35 +33,6 @@ Transform:
   m_Father: {fileID: 6346315193079544501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &653465823162203377
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3375648326720034761}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16375984, y: 0.18076468, z: 0.28994805}
-  m_Center: {x: -0.0016365871, y: -0.016850844, z: 0.01758045}
---- !u!54 &5120713023363282570
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3375648326720034761}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!1 &6346315192092196292
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +426,8 @@ GameObject:
   - component: {fileID: 2116254916}
   - component: {fileID: 1919288213262334501}
   - component: {fileID: 4850911462247413343}
+  - component: {fileID: 4959214591423321603}
+  - component: {fileID: 6514966428712279678}
   m_Layer: 0
   m_Name: PigPlayer
   m_TagString: Untagged
@@ -511,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingJoystick: {fileID: 0}
-  rb: {fileID: 5120713023363282570}
+  rb: {fileID: 4959214591423321603}
   jumpForce: 6
   swipeDistance: 900
   speed: 6
@@ -540,8 +511,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1919288213262334501}
-  rigidbody: {fileID: 5120713023363282570}
-  walkingParticles: {fileID: 0}
+  rigidbody: {fileID: 4959214591423321603}
+--- !u!54 &4959214591423321603
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346315193079544510}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!65 &6514966428712279678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346315193079544510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19070488, y: 0.18138075, z: 0.3124895}
+  m_Center: {x: 0.006948203, y: -0.010540724, z: 0.08434433}
 --- !u!1 &6346315193105947212
 GameObject:
   m_ObjectHideFlags: 0
