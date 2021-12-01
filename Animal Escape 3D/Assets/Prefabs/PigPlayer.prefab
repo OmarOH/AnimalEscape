@@ -454,6 +454,8 @@ GameObject:
   - component: {fileID: 6346315193079544507}
   - component: {fileID: 6346315193079544504}
   - component: {fileID: 6346315193079544505}
+  - component: {fileID: 3734133309258949056}
+  - component: {fileID: 8632827783320048163}
   m_Layer: 0
   m_Name: PigPlayer
   m_TagString: Untagged
@@ -488,7 +490,7 @@ Animator:
   m_GameObject: {fileID: 6346315193079544510}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4b8fe616befabbd42ab2f85e01142d46, type: 3}
-  m_Controller: {fileID: 9100000, guid: b44d55d3a669d654498cc4a4b05655ea, type: 2}
+  m_Controller: {fileID: 9100000, guid: c4b320d18c11ccf4c8dc41126e32d7ef, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -541,6 +543,32 @@ MonoBehaviour:
   speed: 6
   floatingJoystick: {fileID: 0}
   rb: {fileID: 6346315193079544507}
+--- !u!114 &3734133309258949056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346315193079544510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44cf6124af3b5e4f9264507dc4083fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8632827783320048163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346315193079544510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c1b28c0e96e9740a88f32b6e8b69ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3734133309258949056}
+  rigidbody: {fileID: 6346315193079544507}
 --- !u!1 &6346315193105947212
 GameObject:
   m_ObjectHideFlags: 0
