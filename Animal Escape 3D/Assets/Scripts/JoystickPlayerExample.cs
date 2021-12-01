@@ -18,16 +18,16 @@ public class JoystickPlayerExample : MonoBehaviour
     public void FixedUpdate()
     {
         Vector3 direction;
-        if (Input.GetMouseButton(0)) {
-            Debug.Log("AHAGFYHA");
+        if (Input.GetMouseButton(0))
+        {
             direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
             rb.velocity = direction * speed;
 
             oldDirection = direction;
-        } else
+        }
+        else
         {
             direction = oldDirection;
-            rb.velocity = Vector3.zero;
         }
         direction = direction.normalized;
         pigObject.transform.rotation = Quaternion.LookRotation(direction);
