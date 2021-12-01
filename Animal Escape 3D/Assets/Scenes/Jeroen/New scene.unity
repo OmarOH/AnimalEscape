@@ -4217,6 +4217,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859272837}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &913470162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346315192092196292, guid: e6caa77c71a67d74e99b14e738866a89,
+    type: 3}
+  m_PrefabInstance: {fileID: 6346315192752899933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &913862923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5208,7 +5214,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -5233,8 +5239,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077873843}
-  m_LocalRotation: {x: 0.15810578, y: -0.00620458, z: 0.0009934959, w: 0.9874022}
-  m_LocalPosition: {x: 23.419386, y: -0.60759693, z: -12.499281}
+  m_LocalRotation: {x: 0.016125415, y: -0.009615534, z: 0.00015508181, w: 0.99982375}
+  m_LocalPosition: {x: 23.492226, y: -3.4075189, z: -12.99295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10715,37 +10721,37 @@ PrefabInstance:
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.419386
+      value: 23.492226
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.60759693
+      value: -3.4075189
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.499281
+      value: -12.99295
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9874022
+      value: 0.99982375
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15810578
+      value: 0.016125415
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00620458
+      value: -0.009615534
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0009934959
+      value: 0.00015508181
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
@@ -10831,6 +10837,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6346315193079544505, guid: e6caa77c71a67d74e99b14e738866a89,
+        type: 3}
+      propertyPath: pigObject
+      value: 
+      objectReference: {fileID: 913470162}
     - target: {fileID: 6346315193079544505, guid: e6caa77c71a67d74e99b14e738866a89,
         type: 3}
       propertyPath: floatingJoystick
