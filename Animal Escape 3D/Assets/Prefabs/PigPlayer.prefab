@@ -484,7 +484,7 @@ MonoBehaviour:
   floatingJoystick: {fileID: 0}
   rb: {fileID: 4959214591423321603}
   jumpForce: 6
-  swipeDistance: 900
+  swipeDistance: 400
   speed: 6
 --- !u!114 &1919288213262334501
 MonoBehaviour:
