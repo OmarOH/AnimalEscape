@@ -25,7 +25,6 @@ public class FarmerChase : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            print("ritte");
             ani.SetAnimation(gameObject, "Run");
             isChasing = true;
         }
