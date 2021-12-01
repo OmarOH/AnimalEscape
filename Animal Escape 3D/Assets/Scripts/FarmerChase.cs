@@ -8,7 +8,6 @@ public class FarmerChase : MonoBehaviour
     Vector3 targetPosition;
     bool isChasing = false;
     public NavMeshAgent agent;
-    public ParticleSystem walkingParticles;
 
     GameObject player;
 
@@ -28,7 +27,6 @@ public class FarmerChase : MonoBehaviour
         {
             ani.SetAnimation(gameObject, "Run");
             isChasing = true;
-            walkingParticles.Play();
         }
     }
 
