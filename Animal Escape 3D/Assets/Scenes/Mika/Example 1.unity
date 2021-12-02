@@ -5826,6 +5826,10 @@ PrefabInstance:
       value: Pig
       objectReference: {fileID: 0}
     - target: {fileID: 1877940962996312, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877940962996312, guid: e378db38328a4a447b9a61d6a0daa9dc, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
