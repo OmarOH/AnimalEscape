@@ -54,6 +54,15 @@ public class FarmerChase : MonoBehaviour
     {
         ani.SetAnimation(gameObject, "Jump");
         agent.speed = 6f;
+        StartCoroutine(DisableFarmer());
+    }
+
+    IEnumerator DisableFarmer()
+    {
+        yield return new WaitForSeconds(1f);
+        agent.enabled = false;
+        gameObject.GetComponent<FarmerChase>().enabled = false;
+        CancelInvoke();
     }
 
 }
