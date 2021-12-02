@@ -13,6 +13,8 @@ public class FarmerChase : MonoBehaviour
     GameObject player;   
     MovementAnimations ani;
 
+    public float jumpDistance = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,7 @@ public class FarmerChase : MonoBehaviour
     private void CheckInJumpDistance()
     {
         float dist = Vector3.Distance(gameObject.transform.position, player.transform.position);
-        if (dist <= 5f)
+        if (dist <= jumpDistance)
         {
             Jump();
             isChasing = false;
@@ -54,6 +56,7 @@ public class FarmerChase : MonoBehaviour
     {
         ani.SetAnimation(gameObject, "Jump");
         agent.speed = 6f;
+        agent.angularSpeed = 0f;
         StartCoroutine(DisableFarmer());
     }
 
@@ -61,6 +64,7 @@ public class FarmerChase : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         agent.enabled = false;
+        ani.enabled = false;
         CancelInvoke();
         rb.constraints = RigidbodyConstraints.FreezeAll;
         gameObject.GetComponent<FarmerChase>().enabled = false;        
