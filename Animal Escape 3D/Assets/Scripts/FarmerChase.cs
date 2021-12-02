@@ -8,9 +8,9 @@ public class FarmerChase : MonoBehaviour
     Vector3 targetPosition;
     bool isChasing = false;
     public NavMeshAgent agent;
+    public Rigidbody rb;
 
-    GameObject player;
-
+    GameObject player;   
     MovementAnimations ani;
 
     // Start is called before the first frame update
@@ -61,8 +61,9 @@ public class FarmerChase : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         agent.enabled = false;
-        gameObject.GetComponent<FarmerChase>().enabled = false;
         CancelInvoke();
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+        gameObject.GetComponent<FarmerChase>().enabled = false;        
     }
 
 }
