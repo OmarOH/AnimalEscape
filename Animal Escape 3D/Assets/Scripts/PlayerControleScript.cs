@@ -6,12 +6,12 @@ public class PlayerControleScript : MonoBehaviour
 {
     [SerializeField] private FloatingJoystick floatingJoystick;
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private float jumpForce, swipeDistance, speed;
+    [SerializeField] private float jumpForce, swipeDistance, speed, swipeThreshold;
 
     private Transform child;
-    private Vector2 startTouchPos, swipeDelta, oldDirection;
+    private Vector2 startTouchPos, endTouchPos, swipeDelta, lastDirection, swipeVelocity;
     private bool isGrounded, isDraging, jumpAllowed;
-    private float distToGround;
+    private float distToGround, startTime, deltaTime;
 
     private void Start()
     {
@@ -27,10 +27,13 @@ public class PlayerControleScript : MonoBehaviour
         {
             isDraging = true;
             startTouchPos = Input.mousePosition;
+            startTime = Time.time;
         }
         else if (Input.GetMouseButtonUp(0))
         {
             isDraging = false;
+            endTouchPos = Input.mousePosition;
+            deltaTime = Time.time - startTime;
             Reset();
         }
 
@@ -41,9 +44,12 @@ public class PlayerControleScript : MonoBehaviour
             {
                 isDraging = true;
                 startTouchPos = Input.mousePosition;
+                startTime = Time.time;
             } else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
             {
                 isDraging = false;
+                endTouchPos = Input.mousePosition;
+                deltaTime = Time.time - startTime;
                 Reset();
             }
         }
@@ -58,6 +64,7 @@ public class PlayerControleScript : MonoBehaviour
                 swipeDelta = (Vector2)Input.mousePosition - startTouchPos;
         }
 
+        //Check if grounded
         if(!Physics.Raycast(transform.position, -Vector2.up, distToGround + 0.1f))
         {
             isGrounded = false;
@@ -65,8 +72,18 @@ public class PlayerControleScript : MonoBehaviour
             isGrounded = true;
         }
 
+        //Velocity calculation
+        if (deltaTime != 0)
+        {
+            Vector3 distance = startTouchPos - endTouchPos;
+            swipeVelocity = distance / deltaTime;
+            Debug.Log("startTime / deltaTime = " + startTime + " / " + deltaTime);
+        }
+
+        Debug.Log(swipeVelocity.magnitude);
+
         //Crossing The Deadzone
-        if (swipeDelta.magnitude > swipeDistance)
+        if (swipeDelta.magnitude > swipeDistance && isGrounded && swipeVelocity.magnitude > swipeThreshold)
         {
             jumpAllowed = true;
             Reset();
@@ -77,18 +94,22 @@ public class PlayerControleScript : MonoBehaviour
             direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
             rb.velocity = direction * speed;
 
-            //direction = direction.normalized;
-            //child.localRotation = Quaternion.LookRotation(direction);
+            lastDirection = direction;
         }
+
+        //normalize
+        //child.localRotation = Quaternion.LookRotation(lastDirection);
 
         if (jumpAllowed)
         {
             rb.AddForce(Vector3.up * jumpForce + Vector3.forward * jumpForce, ForceMode.Impulse);
+            jumpAllowed = false;
         }
     }
     private void Reset()
     {
         startTouchPos = swipeDelta = Vector2.zero;
         isDraging = false;
+        startTime = 0;
     }
 }
