@@ -5,22 +5,40 @@ using UnityEngine;
 public class ParticleScript : MonoBehaviour
 {
     private PlayerControleScript player;
-    private ParticleSystem parts;
+    private ParticleSystem walkingParticles;
+    private bool spawnParticles;
+    [SerializeField] private ParticleSystem jumpParticles;
 
     void Start()
     {
-        parts = GetComponent<ParticleSystem>();
+        walkingParticles = GetComponent<ParticleSystem>();
         player = transform.parent.GetComponent<PlayerControleScript>();
     }
     void Update()
     {
         if(player.JumpingState)
         {
-            parts.Pause();
+            walkingParticles.Pause();
+            SpawnJumpParticles();
         }
         else
         {
-            parts.Play();
+            walkingParticles.Play();
         }
+    }
+
+    void SpawnJumpParticles()
+    {
+        if(spawnParticles)
+        {
+            ParticleSystem jumpParts = Instantiate(jumpParticles, gameObject.transform.position, Quaternion.identity);
+            StartCoroutine(DestroyAfterSeconds(jumpParts.gameObject, 1f));
+        }
+    }
+
+    IEnumerator DestroyAfterSeconds(GameObject obj, float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(obj);
     }
 }

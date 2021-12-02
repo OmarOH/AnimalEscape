@@ -554,8 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf641fd28f4acb449fdeb1809141484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keeperParticles: {fileID: 7828783826167630164, guid: 6f476a0a0ba296d489a8919c85c414bd,
-    type: 3}
+  keeperParticles: {fileID: 19828306, guid: 745f0035de5fa04448d912c9e1c044b1, type: 3}
 --- !u!1 &6346315193105947212
 GameObject:
   m_ObjectHideFlags: 0

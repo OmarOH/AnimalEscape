@@ -10,7 +10,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collider.CompareTag("Finish"))
         {
-            ParticleSystem particles = Instantiate(keeperParticles, gameObject.transform.position, Quaternion.identity);
+            ParticleSystem particles = Instantiate(keeperParticles, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y + 1f,gameObject.transform.position.z), Quaternion.identity);
             StartCoroutine(DestroyAfterSeconds(particles.gameObject, 1f));
         }
     }
