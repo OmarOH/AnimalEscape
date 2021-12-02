@@ -11,6 +11,10 @@ public class PlayerControleScript : MonoBehaviour
     private Transform child;
     private Vector2 startTouchPos, swipeDelta, oldDirection;
     private bool isDraging, jumpAllowed, isjumping = false;
+    public bool JumpingState{
+        get{return isjumping;}
+        set{isjumping = value;}
+    }
 
     private void Start()
     {
