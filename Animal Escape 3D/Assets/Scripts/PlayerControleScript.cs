@@ -10,11 +10,13 @@ public class PlayerControleScript : MonoBehaviour
 
     private Transform child;
     private Vector2 startTouchPos, swipeDelta, oldDirection;
-    private bool isDraging, jumpAllowed, isjumping = false;
+    private bool isGrounded, isDraging, jumpAllowed;
+    private float distToGround;
 
     private void Start()
     {
         child = GetComponentInChildren<Transform>();
+        distToGround = GetComponent<Collider>().bounds.extents.y;
     }
     void Update()
     {
@@ -56,15 +58,20 @@ public class PlayerControleScript : MonoBehaviour
                 swipeDelta = (Vector2)Input.mousePosition - startTouchPos;
         }
 
+        if(!Physics.Raycast(transform.position, -Vector2.up, distToGround + 0.1f))
+        {
+            isGrounded = false;
+        } else {
+            isGrounded = true;
+        }
+
         //Crossing The Deadzone
         if (swipeDelta.magnitude > swipeDistance)
         {
             jumpAllowed = true;
-            isjumping = true;
-            StartCoroutine(jumpTimer());
             Reset();
         }
-        else if (!isjumping)
+        else if (isGrounded)
         {
             Vector3 direction;
             direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
@@ -77,14 +84,7 @@ public class PlayerControleScript : MonoBehaviour
         if (jumpAllowed)
         {
             rb.AddForce(Vector3.up * jumpForce + Vector3.forward * jumpForce, ForceMode.Impulse);
-            Debug.Log("jump! Stomp! Now in broadway!");
         }
-    }
-    private IEnumerator jumpTimer()
-    {
-        yield return new WaitForSeconds(1.5f);
-        isjumping = false;
-        yield return null;
     }
     private void Reset()
     {
