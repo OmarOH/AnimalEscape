@@ -1797,7 +1797,7 @@ GameObject:
   - component: {fileID: 352959797}
   m_Layer: 0
   m_Name: Grass
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2709,8 +2709,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615483365}
-  m_LocalRotation: {x: -0.16291098, y: 0.019124689, z: -0.0031584173, w: 0.9864504}
-  m_LocalPosition: {x: 0.9416293, y: 13.307386, z: 55.98769}
+  m_LocalRotation: {x: -0.017163951, y: 0.009447297, z: -0.00016218408, w: 0.9998081}
+  m_LocalPosition: {x: -0.008872151, y: -0.54241467, z: 57.88054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1077873847}
@@ -3302,7 +3302,7 @@ GameObject:
   - component: {fileID: 712456203}
   m_Layer: 0
   m_Name: Grass (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -3779,7 +3779,7 @@ GameObject:
   - component: {fileID: 812477942}
   m_Layer: 0
   m_Name: Grass (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4212,7 +4212,7 @@ GameObject:
   - component: {fileID: 859272839}
   m_Layer: 0
   m_Name: Grass (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -4538,7 +4538,7 @@ GameObject:
   - component: {fileID: 952990551}
   m_Layer: 0
   m_Name: Grass (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -5169,7 +5169,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -5194,8 +5194,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077873843}
-  m_LocalRotation: {x: 0.21408054, y: -0.01232033, z: 0.0027003682, w: 0.9767346}
-  m_LocalPosition: {x: 23.529112, y: 0.81166273, z: -12.080355}
+  m_LocalRotation: {x: 0.022482205, y: -0.009533574, z: 0.00021439971, w: 0.9997018}
+  m_LocalPosition: {x: 23.490517, y: -2.9214487, z: -12.988073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 731716992}
@@ -5565,7 +5565,7 @@ GameObject:
   - component: {fileID: 1117403804}
   m_Layer: 0
   m_Name: Grass (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -7538,7 +7538,7 @@ GameObject:
   - component: {fileID: 1555660276}
   m_Layer: 0
   m_Name: Grass (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -8068,7 +8068,7 @@ GameObject:
   - component: {fileID: 1671815262}
   m_Layer: 0
   m_Name: Grass (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10327,37 +10327,37 @@ PrefabInstance:
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.123017095
+      value: 0.0017432133
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.040314
+      value: 0.10638938
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.05502096
+      value: 0.00056596915
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9986204
+      value: 0.99998593
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.052071765
+      value: 0.0053195357
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0062901154
+      value: -0.000087230466
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0025082626
+      value: 0.0000034605764
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
@@ -10388,6 +10388,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2116254916, guid: e6caa77c71a67d74e99b14e738866a89, type: 3}
+      propertyPath: timeToSwipe
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2116254916, guid: e6caa77c71a67d74e99b14e738866a89, type: 3}
       propertyPath: floatingJoystick
       value: 
