@@ -62,6 +62,7 @@ public class FarmerChase : MonoBehaviour
         yield return new WaitForSeconds(1f);
         agent.enabled = false;
         gameObject.GetComponent<FarmerChase>().enabled = false;
+        CancelInvoke();
     }
 
 }
