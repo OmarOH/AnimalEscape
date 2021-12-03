@@ -20,8 +20,6 @@ public class PlayerControleScript : MonoBehaviour
     }
     void Update()
     {
-        jumpAllowed = false;
-
         //Standalone inputs
         if (Input.GetMouseButtonDown(0))
         {
@@ -68,33 +66,33 @@ public class PlayerControleScript : MonoBehaviour
             isGrounded = true;
         }
 
-        //Crossing The Deadzone
-        if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed)
+        //always move first
+        if (isGrounded)
         {
             jumpAllowed = true;
-            Jump();
-            Reset();
-        }
-        else if (isGrounded)
-        {
             MoveCharacter();
         }
 
+        //Do jump if allowed
+        if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed)
+        {
+            jumpAllowed = false;
+            Jump();
+            Reset();
+        }
+
+        //Object rotates in walking direction
         child.localRotation = Quaternion.LookRotation(rb.velocity);
     }
     private void Jump()
-    {
-        if (jumpAllowed)
-        {
-            rb.AddForce(Vector3.up * jumpForce + Vector3.forward * jumpForce, ForceMode.Impulse);
-            jumpAllowed = false;
-        }
+    {  
+        rb.AddForce(Vector3.up * jumpForce + Vector3.forward * jumpForce, ForceMode.Impulse);
     }
     private void MoveCharacter()
     {
         Vector3 direction;
         direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
-        rb.velocity = direction * speed;
+        rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
     }
     private IEnumerator SwipeTimer()
     {
@@ -107,6 +105,5 @@ public class PlayerControleScript : MonoBehaviour
         startTouchPos = swipeDelta = Vector2.zero;
         isDraging = false;
         swipeTimerPassed = false;
-        jumpAllowed = false;
     }
 }
