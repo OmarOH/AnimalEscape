@@ -15,8 +15,8 @@ public class PlayerControleScript : MonoBehaviour
     private float distToGround;
 
     public bool JumpingState{
-        get{return jumpAllowed;}
-        set{jumpAllowed = value;}
+        get{return !isGrounded;}
+        set{isGrounded = value;}
     }
 
     private void Start()
