@@ -27,11 +27,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0.075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2267183165068216158}
   - {fileID: 6346315192092196295}
   - {fileID: 6346315194024828414}
   m_Father: {fileID: 6346315193079544501}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6346315192092196292
 GameObject:
@@ -62,7 +61,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4521093586459945095}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6346315192092196294
 SkinnedMeshRenderer:
@@ -428,6 +427,7 @@ GameObject:
   - component: {fileID: 4850911462247413343}
   - component: {fileID: 4959214591423321603}
   - component: {fileID: 6514966428712279678}
+  - component: {fileID: 4794965259620686687}
   m_Layer: 0
   m_Name: PigPlayer
   m_TagString: Player
@@ -446,6 +446,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
+  - {fileID: 2663014798910738682}
   - {fileID: 4521093586459945095}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -484,8 +485,10 @@ MonoBehaviour:
   floatingJoystick: {fileID: 0}
   rb: {fileID: 4959214591423321603}
   jumpForce: 6
-  swipeDistance: 400
+  minimalSwipeDistance: 500
   speed: 6
+  timeToSwipe: 0.5
+  child: {fileID: 4521093586459945095}
 --- !u!114 &1919288213262334501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +529,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &6514966428712279678
 BoxCollider:
@@ -541,6 +544,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19070488, y: 0.18138075, z: 0.3124895}
   m_Center: {x: 0.006948203, y: -0.010540724, z: 0.08434433}
+--- !u!114 &4794965259620686687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346315193079544510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf641fd28f4acb449fdeb1809141484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keeperParticles: {fileID: 19828306, guid: 745f0035de5fa04448d912c9e1c044b1, type: 3}
 --- !u!1 &6346315193105947212
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +867,7 @@ Transform:
   - {fileID: 6346315193658222740}
   - {fileID: 6346315193988703780}
   m_Father: {fileID: 4521093586459945095}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6346315194039204112
 GameObject:
@@ -946,16 +962,16 @@ Transform:
   m_Father: {fileID: 6346315193220944514}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2267183165068388720
+--- !u!1001 &2663014798910324436
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4521093586459945095}
+    m_TransformParent: {fileID: 6346315193079544501}
     m_Modifications:
     - target: {fileID: 130620, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_Name
-      value: SmokeWhiteSoftTrail
+      value: AnimalTrail
       objectReference: {fileID: 0}
     - target: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_RootOrder
@@ -983,7 +999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.072
+      value: 0.003000006
       objectReference: {fileID: 0}
     - target: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_LocalRotation.w
@@ -995,11 +1011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1061,19 +1077,11 @@ PrefabInstance:
       propertyPath: ColorModule.gradient.maxGradient.key1.r
       value: 0.6415094
       objectReference: {fileID: 0}
-    - target: {fileID: 19917696, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19917696, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d386c5d9fb941e845b73fe6da5491ef2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bff3d95f687092458215d6af5ecc998, type: 3}
---- !u!4 &2267183165068216158 stripped
+--- !u!4 &2663014798910738682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 437806, guid: 1bff3d95f687092458215d6af5ecc998,
     type: 3}
-  m_PrefabInstance: {fileID: 2267183165068388720}
+  m_PrefabInstance: {fileID: 2663014798910324436}
   m_PrefabAsset: {fileID: 0}
