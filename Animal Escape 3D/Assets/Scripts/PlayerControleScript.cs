@@ -7,16 +7,15 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private FloatingJoystick floatingJoystick;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
+    [SerializeField] private Transform child;
 
-    private Transform child;
-    private Vector2 startTouchPos, swipeDelta, lastDirection;
+    private Vector2 startTouchPos, swipeDelta;
     private bool isGrounded, isDraging, jumpAllowed;
     private bool swipeTimerPassed = false;
     private float distToGround;
 
     private void Start()
     {
-        child = GetComponentInChildren<Transform>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
     }
     void Update()
@@ -79,11 +78,9 @@ public class PlayerControleScript : MonoBehaviour
         else if (isGrounded)
         {
             MoveCharacter();
-            //lastDirection = direction;
         }
 
-        //normalize
-        //child.localRotation = Quaternion.LookRotation(lastDirection);
+        child.localRotation = Quaternion.LookRotation(rb.velocity);
     }
     private void Jump()
     {
