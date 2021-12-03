@@ -14,6 +14,11 @@ public class PlayerControleScript : MonoBehaviour
     private bool swipeTimerPassed = false;
     private float distToGround;
 
+    public bool JumpingState{
+        get{return jumpAllowed;}
+        set{jumpAllowed = value;}
+    }
+
     private void Start()
     {
         distToGround = GetComponent<Collider>().bounds.extents.y;
