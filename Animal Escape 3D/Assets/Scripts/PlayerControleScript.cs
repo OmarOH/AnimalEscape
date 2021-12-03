@@ -10,7 +10,7 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private Transform child;
 
     private Vector2 startTouchPos, swipeDelta;
-    private bool isGrounded, isDraging, jumpAllowed;
+    private bool isGrounded, isDraging, jumpAllowed, isJumping;
     private bool swipeTimerPassed = false;
     private float distToGround;
 
@@ -32,34 +32,11 @@ public class PlayerControleScript : MonoBehaviour
             startTouchPos = Input.mousePosition;
             StartCoroutine(SwipeTimer());
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            isDraging = false;
-            Reset();
-        }
-
-        //Mobile inputs
-        if(Input.touches.Length > 0)
-        {
-            if(Input.touches[0].phase == TouchPhase.Began)
-            {
-                isDraging = true;
-                startTouchPos = Input.mousePosition;
-                StartCoroutine(SwipeTimer());
-            } else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
-            {
-                isDraging = false;
-                Reset();
-            }
-        }
-
+        
         //Calculate the distance
-        swipeDelta = Vector2.zero;
         if (isDraging)
         {
-            if (Input.touches.Length > 0)
-                swipeDelta = Input.touches[0].position - startTouchPos;
-            else if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0))
                 swipeDelta = (Vector2)Input.mousePosition - startTouchPos;
         }
 
@@ -68,7 +45,14 @@ public class PlayerControleScript : MonoBehaviour
         {
             isGrounded = false;
         } else {
+            Debug.Log("A");
             isGrounded = true;
+            if (isJumping)
+            {
+                Debug.Log("B");
+                isJumping = false;  
+                ResetValues();
+            }
         }
 
         //always move first
@@ -78,16 +62,21 @@ public class PlayerControleScript : MonoBehaviour
             MoveCharacter();
         }
 
-        //Do jump if allowed
-        if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed)
+        if (Input.GetMouseButtonUp(0))
         {
-            jumpAllowed = false;
-            Jump();
-            Reset();
+            //Do jump if allowed
+            if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed)
+            {
+                isJumping = true;
+                Jump();
+            }
+            ResetValues();
         }
 
         //Object rotates in walking direction
-        child.localRotation = Quaternion.LookRotation(rb.velocity);
+        if (rb.velocity != Vector3.zero) {
+            child.localRotation = Quaternion.LookRotation(rb.velocity);
+        }
     }
     private void Jump()
     {  
@@ -105,10 +94,11 @@ public class PlayerControleScript : MonoBehaviour
         swipeTimerPassed = true;
         yield return null;
     }
-    private void Reset()
+    private void ResetValues()
     {
         startTouchPos = swipeDelta = Vector2.zero;
         isDraging = false;
         swipeTimerPassed = false;
+        jumpAllowed = false;
     }
 }
