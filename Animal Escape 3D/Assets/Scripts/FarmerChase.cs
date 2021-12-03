@@ -75,6 +75,7 @@ public class FarmerChase : MonoBehaviour
     public void GameOver()
     {
         agent.enabled = false;
+        ani.SetAnimation(gameObject, "Idle");
         CancelInvoke();
     }
 
