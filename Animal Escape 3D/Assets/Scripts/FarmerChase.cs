@@ -69,7 +69,7 @@ public class FarmerChase : MonoBehaviour
         CancelInvoke();
         rb.constraints = RigidbodyConstraints.FreezeAll;
         gameObject.GetComponent<FarmerChase>().enabled = false;
-        net.SetActive(false);
+        net.GetComponent<SphereCollider>().enabled = false;
             
     }
 
