@@ -36,6 +36,13 @@ public class Net : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             startPos = other.gameObject.transform.localPosition;
             lerp = true;
+            StartCoroutine(Caught());
         }
+    }
+
+    IEnumerator Caught()
+    {
+        yield return new WaitForSeconds(1f);
+        GameEvents.current.GameOver();
     }
 }

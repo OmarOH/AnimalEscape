@@ -12,6 +12,7 @@ public class FarmerChase : MonoBehaviour
 
     GameObject player;   
     MovementAnimations ani;
+    public GameObject net;
 
     public float jumpDistance = 5f;
 
@@ -67,7 +68,9 @@ public class FarmerChase : MonoBehaviour
         ani.enabled = false;
         CancelInvoke();
         rb.constraints = RigidbodyConstraints.FreezeAll;
-        gameObject.GetComponent<FarmerChase>().enabled = false;        
+        gameObject.GetComponent<FarmerChase>().enabled = false;
+        net.SetActive(false);
+            
     }
 
 }

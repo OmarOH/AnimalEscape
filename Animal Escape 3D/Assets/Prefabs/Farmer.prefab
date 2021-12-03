@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1687806427989328693}
   rb: {fileID: 2117869393}
+  net: {fileID: 1323054187935638269}
   jumpDistance: 5
 --- !u!195 &1687806427989328693
 NavMeshAgent:
