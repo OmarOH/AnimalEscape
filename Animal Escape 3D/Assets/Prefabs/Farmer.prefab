@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 4408536581859580643}
   m_Layer: 0
   m_Name: Farmer
-  m_TagString: Untagged
+  m_TagString: Farmer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1687806427989328693}
   rb: {fileID: 2117869393}
+  net: {fileID: 1323054187935638269}
   jumpDistance: 5
 --- !u!195 &1687806427989328693
 NavMeshAgent:
@@ -1617,6 +1618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b82f3a5502ee64995e257638e9a32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parent: {fileID: 1263661068788501488}
 --- !u!1 &2332995046227656427
 GameObject:
   m_ObjectHideFlags: 0

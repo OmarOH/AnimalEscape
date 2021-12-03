@@ -28,7 +28,7 @@ public class GoalieFarmer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {      
         //Lerping back and forth
         if (timeElapsed < lerpDuration && lerp)
