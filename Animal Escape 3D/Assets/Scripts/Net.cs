@@ -22,6 +22,7 @@ public class Net : MonoBehaviour
         {
             other.transform.parent = transform;
             other.transform.position = transform.position;
+            other.GetComponent<AnimalAnimations>().isCaught = true;
         }
     }
 }
