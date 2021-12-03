@@ -6,7 +6,7 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private ParticleSystem keeperParticles;
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerExit(Collider collider)
     {
         if(collider.CompareTag("Finish"))
         {
