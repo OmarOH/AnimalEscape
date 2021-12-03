@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Net : MonoBehaviour
 {
@@ -42,6 +43,12 @@ public class Net : MonoBehaviour
 
     IEnumerator Caught()
     {
+        GameObject[] allfarmers = GameObject.FindGameObjectsWithTag("Farmer");
+        foreach (GameObject farmer in allfarmers)
+        {
+            farmer.GetComponent<FarmerChase>().GameOver();
+            farmer.GetComponent<FarmerChase>().enabled = false;
+        }
         yield return new WaitForSeconds(1f);
         GameEvents.current.GameOver();
     }
