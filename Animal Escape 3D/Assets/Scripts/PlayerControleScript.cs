@@ -42,6 +42,13 @@ public class PlayerControleScript : MonoBehaviour
                 swipeDelta = (Vector2)Input.mousePosition - startTouchPos;
         }
 
+        //Object rotates in walking direction
+        if (rb.velocity.magnitude > 0.6f)
+        {
+            child.localRotation = Quaternion.LookRotation(rb.velocity);
+            oldRotation = child.localRotation;
+        }
+
         //Check if grounded
         RaycastHit hit;
         if (!Physics.Raycast(transform.position, -Vector2.up, out hit, distToGround + 0.1f))
@@ -56,7 +63,9 @@ public class PlayerControleScript : MonoBehaviour
                 if (isJumping)
                 {
                     isJumping = false;
-                    
+                    rb.velocity = Vector3.zero;
+                    //SET LOOK ROTATION TO LOCAL FORWARD
+
                     Debug.Log("BAHRF");
                     ResetValues();
                 }
@@ -79,12 +88,6 @@ public class PlayerControleScript : MonoBehaviour
                 Jump();
             }
             ResetValues();
-        }
-
-        //Object rotates in walking direction
-        if (rb.velocity.magnitude > 0.6f) {
-            child.localRotation = Quaternion.LookRotation(rb.velocity);
-            oldRotation = child.localRotation;
         }
     }
     private void Jump()
