@@ -9,6 +9,7 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
     [SerializeField] private Transform child;
 
+    private Quaternion oldRotation;
     private Vector2 startTouchPos, swipeDelta;
     private bool isGrounded, isDraging, jumpAllowed, isJumping;
     private bool swipeTimerPassed = false;
@@ -22,6 +23,7 @@ public class PlayerControleScript : MonoBehaviour
     private void Start()
     {
         distToGround = GetComponent<Collider>().bounds.extents.y;
+        child.localRotation = new Quaternion(0,0,0,0);
     }
     void Update()
     {
@@ -41,17 +43,23 @@ public class PlayerControleScript : MonoBehaviour
         }
 
         //Check if grounded
-        if(!Physics.Raycast(transform.position, -Vector2.up, distToGround + 0.1f))
+        RaycastHit hit;
+        if (!Physics.Raycast(transform.position, -Vector2.up, out hit, distToGround + 0.1f))
         {
             isGrounded = false;
-        } else {
-            Debug.Log("A");
-            isGrounded = true;
-            if (isJumping)
+        }
+        else
+        {
+            if (hit.transform.CompareTag("Ground"))
             {
-                Debug.Log("B");
-                isJumping = false;  
-                ResetValues();
+                isGrounded = true;
+                if (isJumping)
+                {
+                    isJumping = false;
+                    
+                    Debug.Log("BAHRF");
+                    ResetValues();
+                }
             }
         }
 
@@ -74,13 +82,14 @@ public class PlayerControleScript : MonoBehaviour
         }
 
         //Object rotates in walking direction
-        if (rb.velocity != Vector3.zero) {
+        if (rb.velocity.magnitude > 0.6f) {
             child.localRotation = Quaternion.LookRotation(rb.velocity);
+            oldRotation = child.localRotation;
         }
     }
     private void Jump()
-    {  
-        rb.AddForce(Vector3.up * jumpForce + Vector3.forward * jumpForce, ForceMode.Impulse);
+    {
+        rb.AddForce(child.transform.up * jumpForce + child.transform.forward * jumpForce, ForceMode.Impulse);
     }
     private void MoveCharacter()
     {
