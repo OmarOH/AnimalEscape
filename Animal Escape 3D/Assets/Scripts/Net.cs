@@ -23,6 +23,7 @@ public class Net : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.GetComponent<AnimalAnimations>().isCaught = true;
             other.transform.parent = transform;           
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             startPos = other.gameObject.transform.localPosition;

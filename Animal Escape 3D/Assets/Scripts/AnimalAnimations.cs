@@ -6,6 +6,7 @@ public class AnimalAnimations : MonoBehaviour
 {
     [SerializeField] private MovementAnimations animator;
     [SerializeField] private Rigidbody rigidbody;
+    [HideInInspector] public bool isCaught;
 
     // Update is called once per frame
     void Update()
@@ -25,6 +26,10 @@ public class AnimalAnimations : MonoBehaviour
         if(rigidbody.velocity.y > 0f)
         {
             animator.SetAnimation(gameObject, "Jump");
+        }
+        if(isCaught)
+        {
+            animator.SetAnimation(gameObject, "Attack");
         }
     }
 }
