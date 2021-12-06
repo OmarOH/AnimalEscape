@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2415241573806308074}
   - component: {fileID: 5526121161712678144}
+  - component: {fileID: 1397262768}
+  - component: {fileID: 1397262769}
   m_Layer: 0
   m_Name: GameEventSystem
   m_TagString: Untagged
@@ -43,3 +45,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36a255120e067e4bbe739540c90e5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1397262768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108498312967015375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963dc504f7bd13d41816d16ef68a7251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1397262769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108498312967015375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c86b13d2b80ac246aa2a09f07a318bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 0}
+  gameWonUI: {fileID: 0}
