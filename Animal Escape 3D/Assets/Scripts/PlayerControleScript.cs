@@ -64,10 +64,9 @@ public class PlayerControleScript : MonoBehaviour
                 {
                     isJumping = false;
                     rb.velocity = Vector3.zero;
-                    //SET LOOK ROTATION TO LOCAL FORWARD
-
                     Debug.Log("BAHRF");
                     ResetValues();
+                    child.transform.localRotation = Quaternion.Euler(0, child.transform.localRotation.y, 0);
                 }
             }
         }
