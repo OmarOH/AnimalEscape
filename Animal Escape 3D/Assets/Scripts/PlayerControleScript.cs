@@ -10,7 +10,7 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private Transform child;
 
     private Vector2 startTouchPos, swipeDelta;
-    private bool isGrounded, isDraging, jumpAllowed, isJumping;
+    private bool isGrounded, isDraging, jumpAllowed, isJumping, enableGroundRaycast = true;
     private bool swipeTimerPassed = false;
     private float distToGround;
 
@@ -40,18 +40,34 @@ public class PlayerControleScript : MonoBehaviour
                 swipeDelta = (Vector2)Input.mousePosition - startTouchPos;
         }
 
+        //Object rotates in walking direction
+        if (rb.velocity.magnitude > 0.6f)
+        {
+            child.localRotation = Quaternion.LookRotation(rb.velocity);
+        }
+
         //Check if grounded
-        if(!Physics.Raycast(transform.position, -Vector2.up, distToGround + 0.1f))
+            RaycastHit hit;
+        if (!Physics.Raycast(transform.position, -Vector2.up, out hit, distToGround + 0.1f))
         {
             isGrounded = false;
-        } else {
-            Debug.Log("A");
-            isGrounded = true;
-            if (isJumping)
+        }
+        else
+        {
+            if (hit.transform.CompareTag("Ground"))
             {
-                Debug.Log("B");
-                isJumping = false;  
-                ResetValues();
+                isGrounded = true;
+                if (isJumping)
+                {
+                    rb.velocity = Vector3.zero;
+                    ResetValues();
+                    if (enableGroundRaycast)
+                    {
+                        Debug.Log("BAHRF");
+                        isJumping = false;
+                        child.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    }
+                }
             }
         }
 
@@ -68,19 +84,16 @@ public class PlayerControleScript : MonoBehaviour
             if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed)
             {
                 isJumping = true;
+                enableGroundRaycast = false;
+                StartCoroutine(raycastTimer());
                 Jump();
             }
             ResetValues();
         }
-
-        //Object rotates in walking direction
-        if (rb.velocity != Vector3.zero) {
-            child.localRotation = Quaternion.LookRotation(rb.velocity);
-        }
     }
     private void Jump()
-    {  
-        rb.AddForce(Vector3.up * jumpForce + Vector3.forward * jumpForce, ForceMode.Impulse);
+    {
+        rb.AddForce(child.transform.up * jumpForce + child.transform.forward * jumpForce, ForceMode.Impulse);
     }
     private void MoveCharacter()
     {
@@ -92,7 +105,13 @@ public class PlayerControleScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToSwipe);
         swipeTimerPassed = true;
-        yield return null;
+    }
+    private IEnumerator raycastTimer()
+    {
+        Debug.Log("started timer");
+        yield return new WaitForSeconds(0.3f);
+        Debug.Log("ended timer");
+        enableGroundRaycast = true;
     }
     private void ResetValues()
     {
