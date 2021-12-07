@@ -58,6 +58,7 @@ public class FarmerChase : MonoBehaviour
         ani.SetAnimation(gameObject, "Jump");
         agent.speed = 6f;
         agent.angularSpeed = 0f;
+        net.GetComponent<SphereCollider>().enabled = true;
         StartCoroutine(DisableFarmer());
     }
 
