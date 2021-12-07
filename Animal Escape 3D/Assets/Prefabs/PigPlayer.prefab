@@ -515,6 +515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1919288213262334501}
   rigidbody: {fileID: 4959214591423321603}
+  isCaught: 0
 --- !u!54 &4959214591423321603
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -10,7 +10,8 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private Transform child;
 
     private Vector2 startTouchPos, swipeDelta;
-    private bool isGrounded, isDraging, jumpAllowed, isJumping, enableGroundRaycast = true;
+    private Vector3 oldDirection;
+    private bool isGrounded, isDraging, jumpAllowed, isJumping, hasLanded = true;
     private bool swipeTimerPassed = false;
     private float distToGround;
 
@@ -43,11 +44,13 @@ public class PlayerControleScript : MonoBehaviour
         //Object rotates in walking direction
         if (rb.velocity.magnitude > 0.6f)
         {
-            child.localRotation = Quaternion.LookRotation(rb.velocity);
+            if (!isJumping) {
+                child.localRotation = Quaternion.LookRotation(rb.velocity);
+            }
         }
 
         //Check if grounded
-            RaycastHit hit;
+        RaycastHit hit;
         if (!Physics.Raycast(transform.position, -Vector2.up, out hit, distToGround + 0.1f))
         {
             isGrounded = false;
@@ -61,11 +64,10 @@ public class PlayerControleScript : MonoBehaviour
                 {
                     rb.velocity = Vector3.zero;
                     ResetValues();
-                    if (enableGroundRaycast)
+                    if (hasLanded)
                     {
                         Debug.Log("BAHRF");
                         isJumping = false;
-                        child.transform.localRotation = Quaternion.Euler(0, 0, 0);
                     }
                 }
             }
@@ -74,6 +76,7 @@ public class PlayerControleScript : MonoBehaviour
         //always move first
         if (isGrounded)
         {
+            Debug.Log("isactive");
             jumpAllowed = true;
             MoveCharacter();
         }
@@ -84,7 +87,7 @@ public class PlayerControleScript : MonoBehaviour
             if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed)
             {
                 isJumping = true;
-                enableGroundRaycast = false;
+                hasLanded = false;
                 StartCoroutine(raycastTimer());
                 Jump();
             }
@@ -100,6 +103,7 @@ public class PlayerControleScript : MonoBehaviour
         Vector3 direction;
         direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
         rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
+        oldDirection = direction;
     }
     private IEnumerator SwipeTimer()
     {
@@ -111,7 +115,7 @@ public class PlayerControleScript : MonoBehaviour
         Debug.Log("started timer");
         yield return new WaitForSeconds(0.3f);
         Debug.Log("ended timer");
-        enableGroundRaycast = true;
+        hasLanded = true;
     }
     private void ResetValues()
     {
