@@ -12,12 +12,14 @@ public class PlayerCollision : MonoBehaviour
         {
             ParticleSystem particles = Instantiate(keeperParticles, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y + 1f,gameObject.transform.position.z), Quaternion.identity);
             StartCoroutine(DestroyAfterSeconds(particles.gameObject, 1f));
+            /*
             collider.GetComponent<Animator>().enabled = false;
             Collider[] colls = collider.GetComponents<Collider>();
             foreach(Collider col in colls)
             {
                 col.enabled = false;
             }
+            */
         }
     }
 
