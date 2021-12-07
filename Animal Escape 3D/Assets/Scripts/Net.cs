@@ -29,6 +29,7 @@ public class Net : MonoBehaviour
             startPos = other.gameObject.transform.localPosition;
             StartCoroutine(Lerp());
             StartCoroutine(Caught());
+            Physics.IgnoreCollision(other, GetComponent<SphereCollider>());
         }
     }
 
