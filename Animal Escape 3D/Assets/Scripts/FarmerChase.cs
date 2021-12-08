@@ -21,7 +21,7 @@ public class FarmerChase : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         ani = gameObject.GetComponent<MovementAnimations>();
-        InvokeRepeating("SetDestination", 1f, 0.1f);
+        InvokeRepeating("SetDestination", 0.5f, 0.2f);
     }
 
     private void OnTriggerEnter(Collider other)
