@@ -9,6 +9,7 @@ public class ExitCollider : MonoBehaviour
         if (other.tag == "Player")
         {
             GameEvents.current.GameWon();
+            gameObject.SetActive(false);
         }
     }
 }

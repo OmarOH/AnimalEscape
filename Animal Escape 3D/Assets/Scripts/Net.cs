@@ -40,6 +40,7 @@ public class Net : MonoBehaviour
             player.transform.localPosition = Vector3.Lerp(startPos, new Vector3(0, 0, 0), timeElapsed / lerpDuration);
             player.transform.GetChild(1).localPosition = Vector3.Lerp(player.transform.GetChild(1).localPosition, 
                 new Vector3(0, 0.03f, -0.05f), timeElapsed / lerpDuration);
+            player.transform.GetChild(1).localPosition = new Vector3(0, 0, 0.075f);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
