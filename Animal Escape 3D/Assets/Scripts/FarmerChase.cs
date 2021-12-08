@@ -9,12 +9,12 @@ public class FarmerChase : MonoBehaviour
     bool isChasing = false;
     public NavMeshAgent agent;
     public Rigidbody rb;
-
-    GameObject player;   
+    public GameObject aimObject, dotObject;
+    GameObject player;
     MovementAnimations ani;
     public GameObject net;
 
-    public float jumpDistance = 5f;
+    public float jumpDistance = 5f, dotEndScale;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,7 @@ public class FarmerChase : MonoBehaviour
         {
             ani.SetAnimation(gameObject, "Run");
             isChasing = true;
+            aimObject.SetActive(true);
         }
     }
 
@@ -59,6 +60,10 @@ public class FarmerChase : MonoBehaviour
         agent.speed = 6f;
         agent.angularSpeed = 0f;
         net.GetComponent<SphereCollider>().enabled = true;
+
+        dotObject.SetActive(true);
+        StartCoroutine(AimDotGrowth());
+
         StartCoroutine(DisableFarmer());
     }
 
@@ -71,6 +76,19 @@ public class FarmerChase : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeAll;
         gameObject.GetComponent<FarmerChase>().enabled = false;
         net.GetComponent<SphereCollider>().enabled = false;            
+    }
+
+    IEnumerator AimDotGrowth()
+    {
+        float elapsed = 0;
+        float duration = 5f;
+        Vector3 endScale = new Vector3(dotEndScale, dotEndScale, dotEndScale);
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            dotObject.transform.localScale = Vector3.Lerp(dotObject.transform.localScale, endScale, elapsed / duration);
+            yield return null;
+        }
     }
 
     public void GameOver()
