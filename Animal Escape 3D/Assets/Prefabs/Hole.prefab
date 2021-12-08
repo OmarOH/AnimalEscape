@@ -494,6 +494,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8046658455379322458}
+  - component: {fileID: 7687271735979200958}
+  - component: {fileID: 6928415536241931209}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -522,6 +524,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7687271735979200958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046658455379322459}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9699993, y: 1.1214724, z: 7.050014}
+  m_Center: {x: -0.98597956, y: 0.06073618, z: -2.5001738}
+--- !u!114 &6928415536241931209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8046658455379322459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0b18332e6b99e4497a3bc28dc0b1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splashEffect: {fileID: 19873706, guid: e2550dae06524a94bbc4bcdf375a88b9, type: 3}
 --- !u!1 &8046658455526730168
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,15 +910,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0886e7b0d9ccc498ea73e30201056b6b, type: 3}
---- !u!4 &3085473674896296170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0886e7b0d9ccc498ea73e30201056b6b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8046658454436897776}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2056619102379031289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8046658454436897776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3085473674896296170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0886e7b0d9ccc498ea73e30201056b6b,
     type: 3}
   m_PrefabInstance: {fileID: 8046658454436897776}
   m_PrefabAsset: {fileID: 0}

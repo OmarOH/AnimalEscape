@@ -13,10 +13,11 @@ public class ParticleScript : MonoBehaviour
     {
         walkingParticles = GetComponent<ParticleSystem>();
         player = transform.parent.GetComponent<PlayerControleScript>();
+        spawnParticles = true;
     }
     void Update()
     {
-        if(player.JumpingState)
+        if(player.JumpingState && spawnParticles)
         {
             walkingParticles.Pause();
             SpawnJumpParticles();
@@ -24,18 +25,26 @@ public class ParticleScript : MonoBehaviour
         else
         {
             walkingParticles.Play();
+            if(!player.JumpingState && !spawnParticles)
+            {
+                walkingParticles.Pause();
+                spawnParticles = true;
+            }
         }
     }
 
     void SpawnJumpParticles()
     {
-        if(spawnParticles)
-        {
-            ParticleSystem jumpParts = Instantiate(jumpParticles, gameObject.transform.position, Quaternion.identity);
-            StartCoroutine(DestroyAfterSeconds(jumpParts.gameObject, 1f));
-        }
+        StartCoroutine(InstatiateParticles());
+        spawnParticles = false;
     }
 
+    IEnumerator InstatiateParticles()
+    {
+        ParticleSystem jumpParts = Instantiate(jumpParticles, gameObject.transform.position, Quaternion.identity);
+        StartCoroutine(DestroyAfterSeconds(jumpParts.gameObject, 1f));
+        yield return new WaitForSeconds(1f);
+    }
     IEnumerator DestroyAfterSeconds(GameObject obj, float time)
     {
         yield return new WaitForSeconds(time);

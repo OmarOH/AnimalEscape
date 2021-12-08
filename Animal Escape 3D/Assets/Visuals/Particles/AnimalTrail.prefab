@@ -4694,3 +4694,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f181da69ab4f1a4ebf1e2d99c9db87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpParticles: {fileID: 9049055435220126953, guid: 4a7679f2cef17de4ca379d5fac7b361f,
+    type: 3}
