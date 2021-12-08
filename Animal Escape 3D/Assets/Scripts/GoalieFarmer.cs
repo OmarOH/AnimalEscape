@@ -17,7 +17,8 @@ public class GoalieFarmer : MonoBehaviour
     bool rotate = false;
     private Vector3 currentAngle;
     float targetAngle;
-
+    public float multiplier;
+    [SerializeField] private ParticleSystem keeperParticles;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,10 +60,12 @@ public class GoalieFarmer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            ParticleSystem particles = Instantiate(keeperParticles, new Vector3(collision.transform.position.x,collision.transform.position.y + 1f,collision.transform.position.z), Quaternion.identity);
+            StartCoroutine(DestroyAfterSeconds(particles.gameObject, 1f));
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-
+            gameObject.GetComponent<Animator>().enabled = false;
             Vector3 dir = -(gameObject.transform.position - collision.gameObject.transform.position);
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * 10f, ForceMode.Impulse);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * multiplier, ForceMode.Impulse);
             Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
             rotate = true;
             lerp = false;
@@ -79,5 +82,11 @@ public class GoalieFarmer : MonoBehaviour
         pig.GetComponent<PlayerControleScript>().enabled = true;
         pig.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         pig.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+    }
+
+    IEnumerator DestroyAfterSeconds(GameObject obj, float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(obj);
     }
 }

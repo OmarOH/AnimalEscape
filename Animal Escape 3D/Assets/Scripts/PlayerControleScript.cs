@@ -76,7 +76,7 @@ public class PlayerControleScript : MonoBehaviour
         //always move first
         if (isGrounded)
         {
-            Debug.Log("isactive");
+            //Debug.Log("isactive");
             jumpAllowed = true;
             MoveCharacter();
         }

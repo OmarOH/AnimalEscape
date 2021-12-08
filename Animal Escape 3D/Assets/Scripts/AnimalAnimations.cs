@@ -11,15 +11,16 @@ public class AnimalAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Mathf.Abs(rigidbody.velocity.magnitude));
         if(Mathf.Abs(rigidbody.velocity.magnitude) > 4.5f)
         {
             animator.SetAnimation(gameObject, "Run");
         }
-        if(Mathf.Abs(rigidbody.velocity.magnitude) >= 3.7f && Mathf.Abs(rigidbody.velocity.magnitude) <= 4.5f)
+        if(Mathf.Abs(rigidbody.velocity.magnitude) >= 1f && Mathf.Abs(rigidbody.velocity.magnitude) <= 4.5f)
         {
             animator.SetAnimation(gameObject, "Walk");
         }
-        if(Mathf.Abs(rigidbody.velocity.magnitude) < 3.6f)
+        if(Mathf.Abs(rigidbody.velocity.magnitude) < 0.9f)
         {
             animator.SetAnimation(gameObject, "Idle");
         }

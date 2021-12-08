@@ -18,11 +18,11 @@ public class DisableTutorial : MonoBehaviour
 
     IEnumerator DisableUI()
     {
-        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
         if (id == 1)
         {
             secondTutorialUI.SetActive(true);
         }
+        yield return null;
     }
 }
