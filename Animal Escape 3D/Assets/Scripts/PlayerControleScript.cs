@@ -66,7 +66,6 @@ public class PlayerControleScript : MonoBehaviour
                     ResetValues();
                     if (hasLanded)
                     {
-                        Debug.Log("BAHRF");
                         isJumping = false;
                     }
                 }
@@ -76,7 +75,6 @@ public class PlayerControleScript : MonoBehaviour
         //always move first
         if (isGrounded)
         {
-            Debug.Log("isactive");
             jumpAllowed = true;
             MoveCharacter();
         }
