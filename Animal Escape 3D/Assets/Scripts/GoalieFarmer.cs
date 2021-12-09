@@ -83,7 +83,7 @@ public class GoalieFarmer : MonoBehaviour
             {
                 if (tr.tag == "Trail")
                 {
-                    tr.gameObject.SetActive(false);
+                    tr.gameObject.GetComponent<ParticleSystem>().Pause();
                 }
             }
 
@@ -104,7 +104,6 @@ public class GoalieFarmer : MonoBehaviour
         {
             if (tr.tag == "Trail")
             {
-                tr.gameObject.SetActive(true);
                 tr.gameObject.GetComponent<ParticleSystem>().Play();
             }
         }
