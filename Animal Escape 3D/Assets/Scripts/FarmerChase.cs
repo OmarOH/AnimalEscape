@@ -31,6 +31,7 @@ public class FarmerChase : MonoBehaviour
             ani.SetAnimation(gameObject, "Run");
             isChasing = true;
             aimObject.SetActive(true);
+            gameObject.GetComponent<SphereCollider>().enabled = false;
         }
     }
 
