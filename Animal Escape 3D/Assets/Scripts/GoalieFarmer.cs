@@ -13,7 +13,7 @@ public class GoalieFarmer : MonoBehaviour
     bool lerp = true;
 
     float rotateTimer;
-    float rotateDuration = 1f;
+    float rotateDuration = 0.5f;
     bool rotate = false;
     private Vector3 currentAngle;
     float targetAngle;
