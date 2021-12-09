@@ -761,6 +761,10 @@ PrefabInstance:
       value: hay_stack_02
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -5212,7 +5216,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -5237,8 +5241,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077873843}
-  m_LocalRotation: {x: 0.1736384, y: -0.0052744425, z: 0.0009299863, w: 0.9847949}
-  m_LocalPosition: {x: 23.062656, y: 0.049062625, z: -12.396438}
+  m_LocalRotation: {x: 0.022828277, y: -0.007773123, z: 0.0001774986, w: 0.9997092}
+  m_LocalPosition: {x: 23.117336, y: -2.9145396, z: -12.988369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6101,6 +6105,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
       propertyPath: m_Name
       value: hay_stack_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7796,6 +7804,10 @@ PrefabInstance:
       value: hay_stack_02 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -8208,25 +8220,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1631908728}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1654116206 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6346315193079544510, guid: e6caa77c71a67d74e99b14e738866a89,
-    type: 3}
-  m_PrefabInstance: {fileID: 6346315192752899933}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &1654116207
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654116206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1655301604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9145,6 +9138,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
       propertyPath: m_Name
       value: hay_stack_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10614,37 +10611,37 @@ PrefabInstance:
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.062656
+      value: 23.117336
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.049062625
+      value: -2.9145396
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.396438
+      value: -12.988369
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9847949
+      value: 0.9997092
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1736384
+      value: 0.022828277
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0052744425
+      value: -0.007773123
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0009299863
+      value: 0.0001774986
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
@@ -10730,8 +10727,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 4794965259620686687, guid: e6caa77c71a67d74e99b14e738866a89, type: 3}
-    - {fileID: 6514966428712279678, guid: e6caa77c71a67d74e99b14e738866a89, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e6caa77c71a67d74e99b14e738866a89, type: 3}
 --- !u!1001 &8046658453594714635
 PrefabInstance:
