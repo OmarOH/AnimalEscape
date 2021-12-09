@@ -488,6 +488,8 @@ MonoBehaviour:
   minimalSwipeDistance: 500
   speed: 6
   timeToSwipe: 0.5
+  animator: {fileID: 1919288213262334501}
+  isCaught: 0
 --- !u!114 &1919288213262334501
 MonoBehaviour:
   m_ObjectHideFlags: 0
