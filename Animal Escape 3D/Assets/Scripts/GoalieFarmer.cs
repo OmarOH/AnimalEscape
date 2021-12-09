@@ -51,6 +51,7 @@ public class GoalieFarmer : MonoBehaviour
         //Rotating when knocked down
         if (rotateTimer < rotateDuration && rotate)
         {
+            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y + 0.015f, transform.position.z), timeElapsed / lerpDuration);
             transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), currentAngle.y, currentAngle.z);
             rotateTimer += Time.deltaTime;
         }
@@ -66,7 +67,7 @@ public class GoalieFarmer : MonoBehaviour
             gameObject.GetComponent<Animator>().enabled = false;
             Vector3 dir = -(gameObject.transform.position - collision.gameObject.transform.position);
             collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * multiplier, ForceMode.Impulse);
-            Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
+            //Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
             rotate = true;
             lerp = false;
 
