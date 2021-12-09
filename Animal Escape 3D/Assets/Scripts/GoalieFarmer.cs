@@ -13,12 +13,13 @@ public class GoalieFarmer : MonoBehaviour
     bool lerp = true;
 
     float rotateTimer;
-    float rotateDuration = 1f;
+    float rotateDuration = 0.5f;
     bool rotate = false;
     private Vector3 currentAngle;
     float targetAngle;
     public float multiplier;
     [SerializeField] private ParticleSystem keeperParticles;
+    public GameObject body;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +52,8 @@ public class GoalieFarmer : MonoBehaviour
         //Rotating when knocked down
         if (rotateTimer < rotateDuration && rotate)
         {
-            transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), currentAngle.y, currentAngle.z);
+            transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), 180, currentAngle.z);
+            body.transform.eulerAngles = new Vector3(body.transform.eulerAngles.x, 90, body.transform.eulerAngles.z);
             rotateTimer += Time.deltaTime;
         }
     }
