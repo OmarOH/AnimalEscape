@@ -97,7 +97,7 @@ public class PlayerControleScript : MonoBehaviour
     }
     private void Jump()
     {
-        rb.AddForce(child.transform.up * jumpForce * 1.25f + child.transform.forward * jumpForce, ForceMode.Impulse);
+        rb.AddForce(child.transform.up * jumpForce + child.transform.forward * jumpForce, ForceMode.Impulse);
     }
     private void MoveCharacter()
     {

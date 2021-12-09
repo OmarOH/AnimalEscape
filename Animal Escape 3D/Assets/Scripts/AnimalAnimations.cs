@@ -9,9 +9,9 @@ public class AnimalAnimations : MonoBehaviour
     [HideInInspector] public bool isCaught;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        print(Mathf.Abs(rigidbody.velocity.magnitude));
+        //print(Mathf.Abs(rigidbody.velocity.magnitude));
         if(Mathf.Abs(rigidbody.velocity.magnitude) > 4.5f)
         {
             animator.SetAnimation(gameObject, "Run");
