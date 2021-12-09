@@ -87,6 +87,7 @@ public class PlayerControleScript : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            CancelInvoke("SwipeTimer");
             //Do jump if allowed
             if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed && !gameWon)
             {
