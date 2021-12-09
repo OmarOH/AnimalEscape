@@ -17,6 +17,8 @@ public class PlayerControleScript : MonoBehaviour
     private bool swipeTimerPassed = false;
     private float distToGround;
 
+    Vector3 direction;
+
     public bool JumpingState{
         get{return !isGrounded;}
         set{isGrounded = value;}
@@ -48,7 +50,7 @@ public class PlayerControleScript : MonoBehaviour
         if (rb.velocity.magnitude > 0.6f && !gameWon)
         {
             if (!isJumping) {
-                child.localRotation = Quaternion.LookRotation(rb.velocity);
+                child.localRotation = Quaternion.LookRotation(direction);
             }
         }
 
@@ -101,7 +103,6 @@ public class PlayerControleScript : MonoBehaviour
     }
     private void MoveCharacter()
     {
-        Vector3 direction;
         direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
         rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
         oldDirection = direction;

@@ -13,13 +13,12 @@ public class GoalieFarmer : MonoBehaviour
     bool lerp = true;
 
     float rotateTimer;
-    float rotateDuration = 0.5f;
+    float rotateDuration = 1f;
     bool rotate = false;
     private Vector3 currentAngle;
     float targetAngle;
     public float multiplier;
     [SerializeField] private ParticleSystem keeperParticles;
-    public GameObject body;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,8 +51,8 @@ public class GoalieFarmer : MonoBehaviour
         //Rotating when knocked down
         if (rotateTimer < rotateDuration && rotate)
         {
-            transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), 180, currentAngle.z);
-            body.transform.eulerAngles = new Vector3(body.transform.eulerAngles.x, 90, body.transform.eulerAngles.z);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y + 0.015f, transform.position.z), timeElapsed / lerpDuration);
+            transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), currentAngle.y, currentAngle.z);
             rotateTimer += Time.deltaTime;
         }
     }
@@ -68,7 +67,7 @@ public class GoalieFarmer : MonoBehaviour
             gameObject.GetComponent<Animator>().enabled = false;
             Vector3 dir = -(gameObject.transform.position - collision.gameObject.transform.position);
             collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * multiplier, ForceMode.Impulse);
-            Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
+            //Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
             rotate = true;
             lerp = false;
 
