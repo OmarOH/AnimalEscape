@@ -6,12 +6,14 @@ public class PlayerControleScript : MonoBehaviour
 {
     [SerializeField] private FloatingJoystick floatingJoystick;
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
     [SerializeField] private Transform child;
+    [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
+    
 
     private Vector2 startTouchPos, swipeDelta;
-    private Vector3 oldDirection;
-    private bool isGrounded, isDraging, jumpAllowed, isJumping, hasLanded = true;
+    private Vector3 oldDirection, finnishStartPos;
+    private bool isGrounded, isDraging, jumpAllowed, isJumping, gameWon;
+    private bool hasLanded = true;
     private bool swipeTimerPassed = false;
     private float distToGround;
 
@@ -23,6 +25,7 @@ public class PlayerControleScript : MonoBehaviour
     private void Start()
     {
         distToGround = GetComponent<Collider>().bounds.extents.y;
+        GameEvents.current.finishTrigger += onGameWon;
     }
     void Update()
     {
@@ -42,7 +45,7 @@ public class PlayerControleScript : MonoBehaviour
         }
 
         //Object rotates in walking direction
-        if (rb.velocity.magnitude > 0.6f)
+        if (rb.velocity.magnitude > 0.6f && !gameWon)
         {
             if (!isJumping) {
                 child.localRotation = Quaternion.LookRotation(rb.velocity);
@@ -66,7 +69,6 @@ public class PlayerControleScript : MonoBehaviour
                     ResetValues();
                     if (hasLanded)
                     {
-                        Debug.Log("BAHRF");
                         isJumping = false;
                     }
                 }
@@ -74,9 +76,8 @@ public class PlayerControleScript : MonoBehaviour
         }
 
         //always move first
-        if (isGrounded)
+        if (isGrounded && !gameWon)
         {
-            Debug.Log("isactive");
             jumpAllowed = true;
             MoveCharacter();
         }
@@ -84,7 +85,7 @@ public class PlayerControleScript : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             //Do jump if allowed
-            if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed)
+            if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed && !gameWon)
             {
                 isJumping = true;
                 hasLanded = false;
@@ -96,7 +97,7 @@ public class PlayerControleScript : MonoBehaviour
     }
     private void Jump()
     {
-        rb.AddForce(child.transform.up * jumpForce + child.transform.forward * jumpForce, ForceMode.Impulse);
+        rb.AddForce(child.transform.up * jumpForce * 1.25f + child.transform.forward * jumpForce, ForceMode.Impulse);
     }
     private void MoveCharacter()
     {
@@ -112,10 +113,24 @@ public class PlayerControleScript : MonoBehaviour
     }
     private IEnumerator raycastTimer()
     {
-        Debug.Log("started timer");
         yield return new WaitForSeconds(0.3f);
-        Debug.Log("ended timer");
         hasLanded = true;
+    }
+    private IEnumerator FinnishWalkLerp()
+    {
+        float zDist = 50;
+        Vector3 endPos = new Vector3(finnishStartPos.x, finnishStartPos.y, finnishStartPos.z + zDist);
+
+        float elapsed = 0;
+        float duration = 4;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.position = Vector3.Lerp(finnishStartPos, endPos, elapsed / duration);
+            child.rotation = Quaternion.Euler(Vector3.forward);
+            yield return null;
+        }
+        transform.position = endPos;
     }
     private void ResetValues()
     {
@@ -123,5 +138,11 @@ public class PlayerControleScript : MonoBehaviour
         isDraging = false;
         swipeTimerPassed = false;
         jumpAllowed = false;
+    }
+    private void onGameWon()
+    {
+        gameWon = true;
+        finnishStartPos = transform.position;
+        StartCoroutine(FinnishWalkLerp());
     }
 }
