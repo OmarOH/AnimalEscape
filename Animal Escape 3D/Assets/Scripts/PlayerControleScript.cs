@@ -8,8 +8,8 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform child;
     [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
-    
-
+    [SerializeField] private MovementAnimations animator;
+    [HideInInspector] public bool isCaught = false;
     private Vector2 startTouchPos, swipeDelta;
     private Vector3 oldDirection, finnishStartPos;
     private bool isGrounded, isDraging, jumpAllowed, isJumping, gameWon;
@@ -17,12 +17,17 @@ public class PlayerControleScript : MonoBehaviour
     private bool swipeTimerPassed = false;
     private float distToGround;
 
-    Vector3 direction;
-
-    public bool JumpingState{
-        get{return !isGrounded;}
-        set{isGrounded = value;}
+    public bool IsJumping
+    {
+        get{return isJumping;}
     }
+
+    public bool IsGrounded
+    {
+        get{return isGrounded;}
+    }
+
+    Vector3 direction;
 
     private void Start()
     {
@@ -31,12 +36,34 @@ public class PlayerControleScript : MonoBehaviour
     }
     void Update()
     {
+        if(isCaught)
+        {
+            print("asdasdasdasd");
+            animator.SetAnimation(gameObject, "Attack");
+        }
+        
+        else if(!isJumping)
+        {
+            if(rb.velocity.magnitude < 0.3f) 
+            {
+                animator.SetAnimation(gameObject, "Idle");
+            }
+            else
+            {
+                animator.SetAnimation(gameObject, "Run");
+            }
+        }
+        else
+        {
+            animator.SetAnimation(gameObject, "Jump");
+        }
         //Standalone inputs
         if (Input.GetMouseButtonDown(0))
         {
             isDraging = true;
             startTouchPos = Input.mousePosition;
-            StartCoroutine(SwipeTimer());
+            CancelInvoke("SwipeTimer");
+            Invoke("SwipeTimer", timeToSwipe);
         }
         
         //Calculate the distance
@@ -86,12 +113,14 @@ public class PlayerControleScript : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            CancelInvoke("SwipeTimer");
             //Do jump if allowed
             if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed && !gameWon)
             {
                 isJumping = true;
                 hasLanded = false;
-                StartCoroutine(raycastTimer());
+                CancelInvoke("landCheckTimer");
+                Invoke("landCheckTimer", 0.3f);
                 Jump();
             }
             ResetValues();
@@ -107,14 +136,12 @@ public class PlayerControleScript : MonoBehaviour
         rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
         oldDirection = direction;
     }
-    private IEnumerator SwipeTimer()
+    private void SwipeTimer()
     {
-        yield return new WaitForSeconds(timeToSwipe);
         swipeTimerPassed = true;
     }
-    private IEnumerator raycastTimer()
+    private void landCheckTimer()
     {
-        yield return new WaitForSeconds(0.3f);
         hasLanded = true;
     }
     private IEnumerator FinnishWalkLerp()
