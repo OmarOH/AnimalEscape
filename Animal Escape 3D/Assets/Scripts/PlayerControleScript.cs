@@ -62,7 +62,8 @@ public class PlayerControleScript : MonoBehaviour
         {
             isDraging = true;
             startTouchPos = Input.mousePosition;
-            StartCoroutine(SwipeTimer());
+            CancelInvoke("SwipeTimer");
+            Invoke("SwipeTimer", timeToSwipe);
         }
         
         //Calculate the distance
@@ -112,12 +113,14 @@ public class PlayerControleScript : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            CancelInvoke("SwipeTimer");
             //Do jump if allowed
             if (swipeDelta.magnitude > minimalSwipeDistance && isGrounded && !swipeTimerPassed && jumpAllowed && !gameWon)
             {
                 isJumping = true;
                 hasLanded = false;
-                StartCoroutine(raycastTimer());
+                CancelInvoke("landCheckTimer");
+                Invoke("landCheckTimer", 0.3f);
                 Jump();
             }
             ResetValues();
@@ -133,14 +136,12 @@ public class PlayerControleScript : MonoBehaviour
         rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
         oldDirection = direction;
     }
-    private IEnumerator SwipeTimer()
+    private void SwipeTimer()
     {
-        yield return new WaitForSeconds(timeToSwipe);
         swipeTimerPassed = true;
     }
-    private IEnumerator raycastTimer()
+    private void landCheckTimer()
     {
-        yield return new WaitForSeconds(0.3f);
         hasLanded = true;
     }
     private IEnumerator FinnishWalkLerp()

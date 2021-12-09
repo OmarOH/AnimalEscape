@@ -19,6 +19,7 @@ public class GoalieFarmer : MonoBehaviour
     float targetAngle;
     public float multiplier;
     [SerializeField] private ParticleSystem keeperParticles;
+    public GameObject body;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,7 @@ public class GoalieFarmer : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y + 0.015f, transform.position.z), timeElapsed / lerpDuration);
             transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), currentAngle.y, currentAngle.z);
+            body.transform.eulerAngles = new Vector3(body.transform.eulerAngles.x, 90, body.transform.eulerAngles.z);
             rotateTimer += Time.deltaTime;
         }
     }
