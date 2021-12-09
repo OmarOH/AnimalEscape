@@ -13,17 +13,23 @@ public class Net : MonoBehaviour
     GameObject player;
     public GameObject parent;
 
+    private bool caught;
+    public bool isCaught
+    {
+        get{return caught;}
+    }
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        caught = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            other.GetComponent<AnimalAnimations>().isCaught = true;
+            other.GetComponent<PlayerControleScript>().isCaught = true;
             other.transform.parent = transform;           
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             startPos = other.gameObject.transform.localPosition;
@@ -48,6 +54,7 @@ public class Net : MonoBehaviour
 
     IEnumerator Caught()
     {
+        caught = true;
         parent.tag = "Untagged";
         GameObject[] allfarmers = GameObject.FindGameObjectsWithTag("Farmer");
         foreach (GameObject farmer in allfarmers)

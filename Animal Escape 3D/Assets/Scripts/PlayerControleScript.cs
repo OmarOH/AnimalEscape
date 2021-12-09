@@ -8,8 +8,8 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform child;
     [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
-    
-
+    [SerializeField] private MovementAnimations animator;
+    [HideInInspector] public bool isCaught = false;
     private Vector2 startTouchPos, swipeDelta;
     private Vector3 oldDirection, finnishStartPos;
     private bool isGrounded, isDraging, jumpAllowed, isJumping, gameWon;
@@ -17,12 +17,17 @@ public class PlayerControleScript : MonoBehaviour
     private bool swipeTimerPassed = false;
     private float distToGround;
 
-    Vector3 direction;
-
-    public bool JumpingState{
-        get{return !isGrounded;}
-        set{isGrounded = value;}
+    public bool IsJumping
+    {
+        get{return isJumping;}
     }
+
+    public bool IsGrounded
+    {
+        get{return isGrounded;}
+    }
+
+    Vector3 direction;
 
     private void Start()
     {
@@ -31,6 +36,27 @@ public class PlayerControleScript : MonoBehaviour
     }
     void Update()
     {
+        if(isCaught)
+        {
+            print("asdasdasdasd");
+            animator.SetAnimation(gameObject, "Attack");
+        }
+        
+        else if(!isJumping)
+        {
+            if(rb.velocity.magnitude < 0.3f) 
+            {
+                animator.SetAnimation(gameObject, "Idle");
+            }
+            else
+            {
+                animator.SetAnimation(gameObject, "Run");
+            }
+        }
+        else
+        {
+            animator.SetAnimation(gameObject, "Jump");
+        }
         //Standalone inputs
         if (Input.GetMouseButtonDown(0))
         {

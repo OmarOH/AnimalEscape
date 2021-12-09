@@ -24,7 +24,7 @@ public class AnimalAnimations : MonoBehaviour
         {
             animator.SetAnimation(gameObject, "Idle");
         }
-        if(rigidbody.velocity.y > 0f)
+        if(rigidbody.velocity.y > 0.5f)
         {
             animator.SetAnimation(gameObject, "Jump");
         }
