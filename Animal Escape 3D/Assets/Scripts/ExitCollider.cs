@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ExitCollider : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem particles;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
+            particles.Play();
             GameEvents.current.GameWon();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 }

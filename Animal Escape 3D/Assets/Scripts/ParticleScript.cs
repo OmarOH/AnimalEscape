@@ -13,35 +13,34 @@ public class ParticleScript : MonoBehaviour
     {
         walkingParticles = GetComponent<ParticleSystem>();
         player = transform.parent.GetComponent<PlayerControleScript>();
-        spawnParticles = true;
     }
-    void Update()
+    void FixedUpdate()
     {
-        if(player.JumpingState && spawnParticles)
+        print("jumping = " + player.IsJumping + " grounded = " + player.IsGrounded);
+
+        if(player.IsGrounded)
+        {
+            walkingParticles.Play();
+            spawnParticles = true;
+        }
+
+        else if(player.IsJumping && spawnParticles)
         {
             walkingParticles.Pause();
             SpawnJumpParticles();
+            spawnParticles = false;
         }
-        else
-        {
-            walkingParticles.Play();
-            if(!player.JumpingState && !spawnParticles)
-            {
-                walkingParticles.Pause();
-                spawnParticles = true;
-            }
-        }
+        
     }
 
     void SpawnJumpParticles()
     {
         StartCoroutine(InstatiateParticles());
-        spawnParticles = false;
     }
 
     IEnumerator InstatiateParticles()
     {
-        ParticleSystem jumpParts = Instantiate(jumpParticles, gameObject.transform.position, Quaternion.identity);
+        ParticleSystem jumpParts = Instantiate(jumpParticles, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.2f,gameObject.transform.position.z), Quaternion.identity);
         StartCoroutine(DestroyAfterSeconds(jumpParts.gameObject, 1f));
         yield return new WaitForSeconds(1f);
     }
