@@ -87,6 +87,8 @@ public class GoalieFarmer : MonoBehaviour
                 }
             }
 
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
 
             StartCoroutine(ResetPlayerScript(collision.gameObject));
         }
