@@ -9,6 +9,7 @@ public class ExitCollider : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
             particles.Play();
             GameEvents.current.GameWon();
             //gameObject.SetActive(false);

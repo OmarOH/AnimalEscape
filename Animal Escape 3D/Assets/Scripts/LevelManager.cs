@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
         {
             instance = this;
         }
-        levelText.text = SceneManager.GetActiveScene().name;
+        levelText.text = PlayerPrefs.GetInt("level").ToString();
     }
 
     public void ReloadCurrentScene()
