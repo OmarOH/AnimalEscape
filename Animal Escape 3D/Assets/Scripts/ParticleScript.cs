@@ -7,6 +7,7 @@ public class ParticleScript : MonoBehaviour
     private PlayerControleScript player;
     private ParticleSystem walkingParticles;
     private bool spawnParticles;
+    bool grounded = false;
     [SerializeField] private ParticleSystem jumpParticles;
 
     void Start()
@@ -16,12 +17,11 @@ public class ParticleScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //print("jumping = " + player.IsJumping + " grounded = " + player.IsGrounded);
-
-        if(player.IsGrounded)
+        if(player.IsGrounded && grounded == false)
         {
             walkingParticles.Play();
             spawnParticles = true;
+            grounded = true;
         }
 
         else if(player.IsJumping && spawnParticles)
@@ -29,8 +29,8 @@ public class ParticleScript : MonoBehaviour
             walkingParticles.Pause();
             SpawnJumpParticles();
             spawnParticles = false;
+            grounded = false;
         }
-        
     }
 
     void SpawnJumpParticles()

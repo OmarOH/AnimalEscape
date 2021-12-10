@@ -14,7 +14,7 @@ public class FarmerChase : MonoBehaviour
     MovementAnimations ani;
     public GameObject net;
 
-    public float jumpDistance = 5f, dotEndScale;
+    public float jumpDistance = 6f, dotEndScale;
 
     // Start is called before the first frame update
     void Start()

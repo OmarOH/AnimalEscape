@@ -86,8 +86,10 @@ public class GoalieFarmer : MonoBehaviour
                     tr.gameObject.GetComponent<ParticleSystem>().Pause();
                 }
             }
+            //Animation changes in the air
+            player.GetComponent<MovementAnimations>().SetAnimation(player.gameObject, "Idle");
 
-
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
             StartCoroutine(ResetPlayerScript(collision.gameObject));
         }
     }
