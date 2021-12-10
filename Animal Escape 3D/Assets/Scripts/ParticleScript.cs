@@ -16,7 +16,7 @@ public class ParticleScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        print("jumping = " + player.IsJumping + " grounded = " + player.IsGrounded);
+        //print("jumping = " + player.IsJumping + " grounded = " + player.IsGrounded);
 
         if(player.IsGrounded)
         {
