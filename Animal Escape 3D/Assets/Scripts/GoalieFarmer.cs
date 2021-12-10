@@ -13,16 +13,18 @@ public class GoalieFarmer : MonoBehaviour
     bool lerp = true;
 
     float rotateTimer;
-    float rotateDuration = 1f;
+    float rotateDuration = 0.5f;
     bool rotate = false;
     private Vector3 currentAngle;
     float targetAngle;
     public float multiplier;
     [SerializeField] private ParticleSystem keeperParticles;
     public GameObject body;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         minPos = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
         maxPos = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
         currentAngle = transform.eulerAngles;
@@ -52,7 +54,7 @@ public class GoalieFarmer : MonoBehaviour
         //Rotating when knocked down
         if (rotateTimer < rotateDuration && rotate)
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y + 0.015f, transform.position.z), timeElapsed / lerpDuration);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y + 0.005f, transform.position.z), timeElapsed / lerpDuration);
             transform.eulerAngles = new Vector3(Mathf.LerpAngle(currentAngle.x, targetAngle, rotateTimer / rotateDuration), currentAngle.y, currentAngle.z);
             body.transform.eulerAngles = new Vector3(body.transform.eulerAngles.x, 90, body.transform.eulerAngles.z);
             rotateTimer += Time.deltaTime;
@@ -75,6 +77,17 @@ public class GoalieFarmer : MonoBehaviour
 
             collision.gameObject.GetComponent<PlayerControleScript>().enabled = false;
             collision.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+
+            //Turn trail child off
+            foreach (Transform tr in player.transform)
+            {
+                if (tr.tag == "Trail")
+                {
+                    tr.gameObject.GetComponent<ParticleSystem>().Pause();
+                }
+            }
+
+
             StartCoroutine(ResetPlayerScript(collision.gameObject));
         }
     }
@@ -85,6 +98,15 @@ public class GoalieFarmer : MonoBehaviour
         pig.GetComponent<PlayerControleScript>().enabled = true;
         pig.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         pig.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
+        //Turn trail child off
+        foreach (Transform tr in player.transform)
+        {
+            if (tr.tag == "Trail")
+            {
+                tr.gameObject.GetComponent<ParticleSystem>().Play();
+            }
+        }
     }
 
     IEnumerator DestroyAfterSeconds(GameObject obj, float time)

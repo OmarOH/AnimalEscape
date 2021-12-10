@@ -31,6 +31,7 @@ public class FarmerChase : MonoBehaviour
             ani.SetAnimation(gameObject, "Run");
             isChasing = true;
             aimObject.SetActive(true);
+            gameObject.GetComponent<SphereCollider>().enabled = false;
         }
     }
 
@@ -59,12 +60,18 @@ public class FarmerChase : MonoBehaviour
         ani.SetAnimation(gameObject, "Jump");
         agent.speed = 6f;
         agent.angularSpeed = 0f;
-        net.GetComponent<SphereCollider>().enabled = true;
+
+        Invoke("TurnNetOn", 0.1f);
 
         dotObject.SetActive(true);
         StartCoroutine(AimDotGrowth());
 
         StartCoroutine(DisableFarmer());
+    }
+
+    void TurnNetOn()
+    {
+        net.GetComponent<SphereCollider>().enabled = true;
     }
 
     IEnumerator DisableFarmer()

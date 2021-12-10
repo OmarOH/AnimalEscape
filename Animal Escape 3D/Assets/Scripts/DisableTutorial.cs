@@ -4,25 +4,13 @@ using UnityEngine;
 
 public class DisableTutorial : MonoBehaviour
 {
-    public GameObject secondTutorialUI;
-    public int id = 0;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            StartCoroutine(DisableUI());
+            gameObject.SetActive(false);
         }
-    }
-
-    IEnumerator DisableUI()
-    {
-        gameObject.SetActive(false);
-        if (id == 1)
-        {
-            secondTutorialUI.SetActive(true);
-        }
-        yield return null;
     }
 }
