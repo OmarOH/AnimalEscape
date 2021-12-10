@@ -16,8 +16,6 @@ public class ParticleScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        print("jumping = " + player.IsJumping + " grounded = " + player.IsGrounded);
-
         if(player.IsGrounded)
         {
             walkingParticles.Play();
@@ -30,7 +28,6 @@ public class ParticleScript : MonoBehaviour
             SpawnJumpParticles();
             spawnParticles = false;
         }
-        
     }
 
     void SpawnJumpParticles()
