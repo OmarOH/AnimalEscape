@@ -6,7 +6,6 @@ using Cinemachine;
 public class GameStateCameraScript : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
-    [SerializeField] private Transform newPos;
 
     void Start()
     {
