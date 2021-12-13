@@ -72,7 +72,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1772039244152342714
 Transform:
@@ -151,7 +151,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1772039243054028868
 Transform:
@@ -230,7 +230,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1772039243009629597
 Transform:
@@ -309,7 +309,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1772039243306419134
 Transform:
@@ -386,7 +386,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6768127951382818062
 Transform:
@@ -419,10 +419,10 @@ GameObject:
   - component: {fileID: 8046658453853417443}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8046658453853417452
 Transform:
@@ -464,7 +464,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9281753ca87d34f67a12698da42188ab, type: 2}
+  - {fileID: 2100000, guid: 92cff562ef8dfa543a3e18ae284be2e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -501,7 +501,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8046658455379322458
 Transform:
@@ -512,7 +512,7 @@ Transform:
   m_GameObject: {fileID: 8046658455379322459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 3085473674896296170}
   - {fileID: 3085473674679948048}
@@ -536,7 +536,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.9699993, y: 1.1214724, z: 7.050014}
-  m_Center: {x: -0.98597956, y: 0.06073618, z: -2.5001738}
+  m_Center: {x: -0.98597956, y: 0.34, z: -2.5001738}
 --- !u!114 &6928415536241931209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,10 +563,10 @@ GameObject:
   - component: {fileID: 8046658455526730174}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8046658455526730175
 Transform:
@@ -608,7 +608,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9281753ca87d34f67a12698da42188ab, type: 2}
+  - {fileID: 2100000, guid: 92cff562ef8dfa543a3e18ae284be2e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -710,11 +710,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9281753ca87d34f67a12698da42188ab, type: 2}
+      objectReference: {fileID: 2100000, guid: 92cff562ef8dfa543a3e18ae284be2e1, type: 2}
     - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
         type: 3}
       propertyPath: m_Name
       value: Corner fixed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0886e7b0d9ccc498ea73e30201056b6b, type: 3}
@@ -801,11 +811,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9281753ca87d34f67a12698da42188ab, type: 2}
+      objectReference: {fileID: 2100000, guid: 92cff562ef8dfa543a3e18ae284be2e1, type: 2}
     - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
         type: 3}
       propertyPath: m_Name
       value: Corner fixed (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0886e7b0d9ccc498ea73e30201056b6b, type: 3}
@@ -902,23 +922,33 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9281753ca87d34f67a12698da42188ab, type: 2}
+      objectReference: {fileID: 2100000, guid: 92cff562ef8dfa543a3e18ae284be2e1, type: 2}
     - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
         type: 3}
       propertyPath: m_Name
       value: Corner fixed
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0886e7b0d9ccc498ea73e30201056b6b, type: 3}
---- !u!1 &2056619102379031289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8046658454436897776}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3085473674896296170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8046658454436897776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2056619102379031289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
     type: 3}
   m_PrefabInstance: {fileID: 8046658454436897776}
   m_PrefabAsset: {fileID: 0}
@@ -993,11 +1023,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9281753ca87d34f67a12698da42188ab, type: 2}
+      objectReference: {fileID: 2100000, guid: 92cff562ef8dfa543a3e18ae284be2e1, type: 2}
     - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
         type: 3}
       propertyPath: m_Name
       value: Corner fixed (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0886e7b0d9ccc498ea73e30201056b6b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0886e7b0d9ccc498ea73e30201056b6b, type: 3}
