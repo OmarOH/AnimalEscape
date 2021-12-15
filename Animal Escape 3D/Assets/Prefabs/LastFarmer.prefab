@@ -79,7 +79,7 @@ MeshRenderer:
   m_GameObject: {fileID: 593899083507165914}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -660,6 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 5
+  range: 2.5
   keeperParticles: {fileID: 19828306, guid: 745f0035de5fa04448d912c9e1c044b1, type: 3}
   body: {fileID: 2080373227314985717}
 --- !u!1 &2080373227314985627
@@ -702,7 +703,7 @@ SkinnedMeshRenderer:
   m_GameObject: {fileID: 2080373227314985627}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1527,7 +1528,7 @@ Transform:
   - {fileID: 2080373227314489065}
   m_Father: {fileID: 2080373227314489017}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &2080373227314985719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,8 +1707,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2820911417018220158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.000000044703484, y: -0.00000008940697, z: -0.000000014901161,
+    w: 1}
+  m_LocalPosition: {x: 0.00000032614423, y: -0.0000005960466, z: 0.0000000130383455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1477936901304005235}
@@ -1730,7 +1732,7 @@ MeshRenderer:
   m_GameObject: {fileID: 2820911417018220158}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1843,7 +1845,7 @@ MeshRenderer:
   m_GameObject: {fileID: 6584252095354591521}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1922,7 +1924,7 @@ MeshRenderer:
   m_GameObject: {fileID: 7120706625730680589}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
