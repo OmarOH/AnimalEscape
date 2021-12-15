@@ -149,7 +149,7 @@ public class PlayerControleScript : MonoBehaviour
         Vector3 endPos = new Vector3(finnishStartPos.x, finnishStartPos.y, finnishStartPos.z + zDist);
 
         float elapsed = 0;
-        float duration = 4;
+        float duration = 10;
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
