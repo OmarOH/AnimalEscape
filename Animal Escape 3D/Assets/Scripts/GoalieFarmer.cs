@@ -18,6 +18,8 @@ public class GoalieFarmer : MonoBehaviour
     private Vector3 currentAngle;
     float targetAngle;
     public float multiplier;
+    public float range = 2.5f;
+
     [SerializeField] private ParticleSystem keeperParticles;
     public GameObject body;
     GameObject player;
@@ -25,8 +27,8 @@ public class GoalieFarmer : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        minPos = new Vector3(transform.position.x - 5, transform.position.y, transform.position.z);
-        maxPos = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
+        minPos = new Vector3(transform.position.x - range, transform.position.y, transform.position.z);
+        maxPos = new Vector3(transform.position.x + range, transform.position.y, transform.position.z);
         currentAngle = transform.eulerAngles;
         targetAngle = currentAngle.x - 90;
     }
