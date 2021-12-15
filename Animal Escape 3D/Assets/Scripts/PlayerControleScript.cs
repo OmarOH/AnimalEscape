@@ -38,7 +38,6 @@ public class PlayerControleScript : MonoBehaviour
     {
         if(isCaught)
         {
-            print("asdasdasdasd");
             animator.SetAnimation(gameObject, "Attack");
         }
         
