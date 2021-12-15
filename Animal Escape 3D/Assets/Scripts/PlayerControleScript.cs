@@ -12,7 +12,8 @@ public class PlayerControleScript : MonoBehaviour
     [HideInInspector] public bool isCaught = false;
     private Vector2 startTouchPos, swipeDelta;
     private Vector3 oldDirection, finnishStartPos;
-    private bool isGrounded, isDraging, jumpAllowed, isJumping, gameWon;
+    private bool isGrounded, isDraging, jumpAllowed, isJumping;
+    public static bool gameWon;
     private bool hasLanded = true;
     private bool swipeTimerPassed = false;
     private float distToGround;
@@ -143,7 +144,7 @@ public class PlayerControleScript : MonoBehaviour
     {
         hasLanded = true;
     }
-    private IEnumerator FinnishWalkLerp()
+    private IEnumerator FinishWalkLerp()
     {
         float zDist = 50;
         Vector3 endPos = new Vector3(finnishStartPos.x, finnishStartPos.y, finnishStartPos.z + zDist);
@@ -170,6 +171,6 @@ public class PlayerControleScript : MonoBehaviour
     {
         gameWon = true;
         finnishStartPos = transform.position;
-        StartCoroutine(FinnishWalkLerp());
+        StartCoroutine(FinishWalkLerp());
     }
 }

@@ -21,7 +21,7 @@ public class SliderScript : MonoBehaviour
         startDist = Vector3.Distance(player.transform.position, finish.transform.position);
         slider.maxValue = startDist;
 
-        InvokeRepeating("CheckDistance", 0f, 0.3f);
+        //InvokeRepeating("CheckDistance", 0f, 0.1f);
     }
 
     void CheckDistance()
@@ -30,5 +30,9 @@ public class SliderScript : MonoBehaviour
         slider.value = startDist - dist;
     }
 
-
+    private void FixedUpdate()
+    {
+        if (!PlayerControleScript.gameWon)
+            CheckDistance();
+    }
 }
