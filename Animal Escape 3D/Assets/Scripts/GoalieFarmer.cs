@@ -23,6 +23,9 @@ public class GoalieFarmer : MonoBehaviour
     [SerializeField] private ParticleSystem keeperParticles;
     public GameObject body;
     GameObject player;
+
+    public static GoalieFarmer instance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,8 @@ public class GoalieFarmer : MonoBehaviour
         maxPos = new Vector3(transform.position.x + range, transform.position.y, transform.position.z);
         currentAngle = transform.eulerAngles;
         targetAngle = currentAngle.x - 90;
+        if (instance == null)
+            instance = this;
     }
 
     // Update is called once per frame
@@ -67,33 +72,41 @@ public class GoalieFarmer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            ParticleSystem particles = Instantiate(keeperParticles, new Vector3(collision.transform.position.x,collision.transform.position.y + 1f,collision.transform.position.z), Quaternion.identity);
+            ParticleSystem particles = Instantiate(keeperParticles, new Vector3(collision.transform.position.x, collision.transform.position.y + 1f, collision.transform.position.z), Quaternion.identity);
             StartCoroutine(DestroyAfterSeconds(particles.gameObject, 1f));
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            gameObject.GetComponent<Animator>().enabled = false;
-            Vector3 dir = -(gameObject.transform.position - collision.gameObject.transform.position);
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * multiplier, ForceMode.Impulse);
-            //Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
-            rotate = true;
-            lerp = false;
-
             collision.gameObject.GetComponent<PlayerControleScript>().enabled = false;
             collision.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
-
-            //Turn trail child off
-            foreach (Transform tr in player.transform)
-            {
-                if (tr.tag == "Trail")
-                {
-                    tr.gameObject.GetComponent<ParticleSystem>().Pause();
-                }
-            }
-            //Animation changes in the air
-            player.GetComponent<MovementAnimations>().SetAnimation(player.gameObject, "Idle");
-
-            gameObject.GetComponent<CapsuleCollider>().enabled = false;
             StartCoroutine(ResetPlayerScript(collision.gameObject));
+            Vector3 dir = -(gameObject.transform.position - collision.gameObject.transform.position);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * multiplier * 2, ForceMode.Impulse);
+            KnockOver();
         }
+    }
+
+    public void KnockOver()
+    {
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        gameObject.GetComponent<Animator>().enabled = false;
+        
+        //Physics.IgnoreCollision(gameObject.GetComponent<CapsuleCollider>(), collision.collider);
+        rotate = true;
+        lerp = false;
+
+        
+
+        //Turn trail child off
+        foreach (Transform tr in player.transform)
+        {
+            if (tr.tag == "Trail")
+            {
+                tr.gameObject.GetComponent<ParticleSystem>().Pause();
+            }
+        }
+        //Animation changes in the air
+        player.GetComponent<MovementAnimations>().SetAnimation(player.gameObject, "Idle");
+
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        
     }
 
     IEnumerator ResetPlayerScript(GameObject pig)
