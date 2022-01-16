@@ -7,12 +7,14 @@ public class PlayerControleScript : MonoBehaviour
     [SerializeField] private FloatingJoystick floatingJoystick;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform child;
-    [SerializeField] private float jumpForce, minimalSwipeDistance, speed, timeToSwipe;
+    [SerializeField] private float jumpForce, minimalSwipeDistance, timeToSwipe;
     [SerializeField] private MovementAnimations animator;
     [HideInInspector] public bool isCaught = false;
     private Vector2 startTouchPos, swipeDelta;
     private Vector3 oldDirection, finnishStartPos;
     private bool isGrounded, isDraging, jumpAllowed, isJumping;
+
+    public static int speed = 8;
     public static bool gameWon;
     private bool hasLanded = true;
     private bool swipeTimerPassed = false;
@@ -32,9 +34,11 @@ public class PlayerControleScript : MonoBehaviour
 
     private void Start()
     {
+        speed = 8;
         distToGround = GetComponent<Collider>().bounds.extents.y;
         GameEvents.current.finishTrigger += onGameWon;
     }
+
     void Update()
     {
         if(isCaught)

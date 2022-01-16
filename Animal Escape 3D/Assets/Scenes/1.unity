@@ -192,6 +192,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1735938}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &4877551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3607882, y: 30, z: 10.18041}
+  m_Center: {x: 0.0000038146973, y: 17.5, z: -4.909811}
+--- !u!1 &4975180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5011052}
+  - component: {fileID: 4877551}
+  - component: {fileID: 4975181}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &4975181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5011052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4975180}
+  m_LocalRotation: {x: -0, y: 0.21475595, z: -0, w: 0.9766678}
+  m_LocalPosition: {x: 19.235146, y: -0.11628485, z: -90.51222}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 24.802002, z: 0}
 --- !u!1001 &5983122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -806,6 +863,63 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1357246072}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &156815890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156849327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &156849327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157206671}
+  - component: {fileID: 156815890}
+  - component: {fileID: 156849328}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &156849328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156849327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &157206671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156849327}
+  m_LocalRotation: {x: 0.009822155, y: 0.99697894, z: -0.0027218247, w: 0.07700155}
+  m_LocalPosition: {x: 27.79427, y: -0.5105839, z: -20.713837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: -20.911001, z: 0}
 --- !u!1001 &166749560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -948,6 +1062,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 169452554}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &175316041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175407209}
+  m_LocalRotation: {x: -0, y: 0.24441613, z: -0, w: 0.9696705}
+  m_LocalPosition: {x: -4.7592764, y: -0.11628485, z: -63.019985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 28.295002, z: 0}
+--- !u!1 &175407209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 175316041}
+  - component: {fileID: 175441612}
+  - component: {fileID: 175407210}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (34)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &175407210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175407209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &175441612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175407209}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1 &189890420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1523,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 225310224}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &228281182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228382590}
+  m_LocalRotation: {x: -0, y: -0.9738271, z: -0, w: -0.22729017}
+  m_LocalPosition: {x: -4.9699993, y: -0.5840039, z: -49.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: -206.275, z: 0}
+--- !u!1 &228382590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228281182}
+  - component: {fileID: 228413921}
+  - component: {fileID: 228382591}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (37)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &228382591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228382590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &228413921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228382590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1001 &252743714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2228,6 +2456,63 @@ Transform:
   m_Father: {fileID: 1830747806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &414772085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415201109}
+  - component: {fileID: 414805464}
+  - component: {fileID: 414772086}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &414772086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414772085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &414805464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414772085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!4 &415201109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414772085}
+  m_LocalRotation: {x: 0.01002141, y: 0.92986286, z: 0.0018586027, w: -0.36776525}
+  m_LocalPosition: {x: 16.478989, y: -0.34717703, z: -36.80226}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 31.080002, z: 0}
 --- !u!1001 &440450046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2351,6 +2636,30 @@ Transform:
   - {fileID: 827786420}
   - {fileID: 1943556601}
   - {fileID: 2040052923}
+  - {fileID: 734433035}
+  - {fileID: 1783797797}
+  - {fileID: 684534067}
+  - {fileID: 1170160693}
+  - {fileID: 835597138}
+  - {fileID: 1490133577}
+  - {fileID: 728513236}
+  - {fileID: 157206671}
+  - {fileID: 841187021}
+  - {fileID: 415201109}
+  - {fileID: 5011052}
+  - {fileID: 1472491455}
+  - {fileID: 737424852}
+  - {fileID: 1736973704}
+  - {fileID: 1871915171}
+  - {fileID: 858514981}
+  - {fileID: 1096530750}
+  - {fileID: 1805247874}
+  - {fileID: 1207207565}
+  - {fileID: 1217349674}
+  - {fileID: 175316041}
+  - {fileID: 1046103391}
+  - {fileID: 1817383311}
+  - {fileID: 228281182}
   m_Father: {fileID: 977628893}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3245,6 +3554,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.36078814, y: 2.3817058, z: 10.1804085}
   m_Center: {x: 0, y: 1.1908493, z: -4.9098167}
+--- !u!1 &684373267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 684534067}
+  - component: {fileID: 684405686}
+  - component: {fileID: 684373268}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &684373268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684373267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &684405686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684373267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!4 &684534067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684373267}
+  m_LocalRotation: {x: 0.01017201, y: 0.98205185, z: 0.00064291665, w: 0.18833546}
+  m_LocalPosition: {x: -14.93, y: -0.2779765, z: -32.051712}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0.147, y: -201.711, z: 1.159}
 --- !u!1 &701919969 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2056619100993614333, guid: ee731a5e5e1d0461d9b8ad2dddbf50e5,
@@ -3508,6 +3874,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712456201}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &728375383
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728475380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &728475380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728513236}
+  - component: {fileID: 728375383}
+  - component: {fileID: 728475381}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &728475381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728475380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &728513236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728475380}
+  m_LocalRotation: {x: 0.008132513, y: 0.8987694, z: -0.00614372, w: 0.4383032}
+  m_LocalPosition: {x: 26.220669, y: -0.44054317, z: -10.866562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: -64.07201, z: 0}
 --- !u!1001 &730503062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3591,6 +4014,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 730503062}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &734041486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734073643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3607882, y: 30, z: 10.18041}
+  m_Center: {x: 0.0000038146973, y: 17.5, z: -4.909811}
+--- !u!1 &734073643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 734433035}
+  - component: {fileID: 734041486}
+  - component: {fileID: 734073644}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &734073644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734073643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &734433035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734073643}
+  m_LocalRotation: {x: 0.010108141, y: 0.9486044, z: 0.0013071087, w: -0.31630045}
+  m_LocalPosition: {x: -18.005657, y: -0.23, z: -12.5494995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 24.802002, z: 0}
 --- !u!1001 &735720155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3662,6 +4142,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 735720155}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &737292119
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737389044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &737389044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737424852}
+  - component: {fileID: 737292119}
+  - component: {fileID: 737389045}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (26)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &737389045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737389044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &737424852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737389044}
+  m_LocalRotation: {x: -0, y: -0.0718959, z: -0, w: 0.9974122}
+  m_LocalPosition: {x: 16.530003, y: -0.11628485, z: -70.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: -8.246, z: 0}
 --- !u!1001 &747179440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4324,6 +4861,177 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 829831495}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &835201493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835301234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &835301234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 835597138}
+  - component: {fileID: 835201493}
+  - component: {fileID: 835301235}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &835301235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835301234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &835597138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835301234}
+  m_LocalRotation: {x: 0.005739358, y: 0.7112915, z: -0.008422756, w: 0.7028233}
+  m_LocalPosition: {x: -2.0167522, y: -0.5192628, z: -4.7219086}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: -101.392006, z: 0}
+--- !u!4 &841187021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841278189}
+  m_LocalRotation: {x: 0.010182649, y: 0.97204894, z: 0.0004435315, w: -0.23455735}
+  m_LocalPosition: {x: 23.341389, y: -0.45619726, z: -29.578308}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 15.054001, z: 0}
+--- !u!1 &841278189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841187021}
+  - component: {fileID: 841311312}
+  - component: {fileID: 841278190}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &841278190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841278189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &841311312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841278189}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!4 &858514981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858552837}
+  m_LocalRotation: {x: -0, y: -0.7737962, z: -0, w: 0.6334347}
+  m_LocalPosition: {x: -4.59, y: -0.11628485, z: -103.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: -101.392006, z: 0}
+--- !u!1 &858552837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 858514981}
+  - component: {fileID: 858651816}
+  - component: {fileID: 858552838}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (29)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &858552838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858552837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &858651816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858552837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1 &859272837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,6 +5828,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1042097834}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1046103391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046337919}
+  m_LocalRotation: {x: -0, y: 0.16438985, z: -0, w: 0.98639554}
+  m_LocalPosition: {x: 10.639999, y: -0.11628485, z: -44.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 18.924002, z: 0}
+--- !u!65 &1046241250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046337919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &1046337919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046103391}
+  - component: {fileID: 1046241250}
+  - component: {fileID: 1046337920}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (35)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1046337920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046337919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1055551754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5322,8 +6087,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077873843}
-  m_LocalRotation: {x: 0.231375, y: -0.004778165, z: 0.0011363986, w: 0.9728523}
-  m_LocalPosition: {x: 23.38771, y: 3.1309824, z: -13.928856}
+  m_LocalRotation: {x: 0.23137516, y: -0.004777006, z: 0.0011361237, w: 0.97285223}
+  m_LocalPosition: {x: 23.387688, y: 3.1309855, z: -13.928854}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5413,6 +6178,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1096000845}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1096530750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096558366}
+  m_LocalRotation: {x: -0, y: -0.5304556, z: -0, w: 0.84771276}
+  m_LocalPosition: {x: -13.68, y: -0.11628485, z: -99.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: -64.07201, z: 0}
+--- !u!1 &1096558366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096530750}
+  - component: {fileID: 1096655297}
+  - component: {fileID: 1096558367}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1096558367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096558366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1096655297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096558366}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1001 &1097773188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6157,6 +6979,63 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8910f82249f3d7248911160194bef6a8, type: 3}
+--- !u!1 &1169727509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170160693}
+  - component: {fileID: 1169761976}
+  - component: {fileID: 1169727510}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1169727510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169727509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1169761976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169727509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!4 &1170160693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169727509}
+  m_LocalRotation: {x: 0.009044027, y: 0.95932764, z: -0.0046998556, w: 0.2821111}
+  m_LocalPosition: {x: -9.51, y: -0.4181695, z: -40.589973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: -44.852, z: 0}
 --- !u!1001 &1176793832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6299,6 +7178,120 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1178581635}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1207082000
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207114413}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &1207114413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1207207565}
+  - component: {fileID: 1207082000}
+  - component: {fileID: 1207114414}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (32)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1207114414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207114413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1207207565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207114413}
+  m_LocalRotation: {x: -0, y: 0.1309956, z: -0, w: 0.991383}
+  m_LocalPosition: {x: -14.77, y: -0.11628485, z: -80.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 15.054001, z: 0}
+--- !u!1 &1216926730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217349674}
+  - component: {fileID: 1216959149}
+  - component: {fileID: 1216926731}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (33)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1216926731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216926730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1216959149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216926730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!4 &1217349674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216926730}
+  m_LocalRotation: {x: -0, y: 0.26790965, z: -0, w: 0.9634441}
+  m_LocalPosition: {x: -9.58, y: -0.11628485, z: -71.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 31.080002, z: 0}
 --- !u!1001 &1256272416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7503,6 +8496,120 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1461637368}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1472361794
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472459679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &1472459679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472491455}
+  - component: {fileID: 1472361794}
+  - component: {fileID: 1472459680}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (25)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1472459680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472459679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1472491455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472459679}
+  m_LocalRotation: {x: -0, y: -0.0718959, z: -0, w: 0.9974122}
+  m_LocalPosition: {x: 17.899998, y: -0.11628485, z: -80.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: -8.246, z: 0}
+--- !u!4 &1490133577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490435689}
+  m_LocalRotation: {x: 0.005739358, y: 0.7112915, z: -0.008422756, w: 0.7028233}
+  m_LocalPosition: {x: 18.22372, y: -0.2566204, z: -4.757965}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: -101.392006, z: 0}
+--- !u!1 &1490435689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1490133577}
+  - component: {fileID: 1490532556}
+  - component: {fileID: 1490435690}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1490435690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490435689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1490532556
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490435689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1001 &1527036205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8663,6 +9770,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733638092}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1736973704
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737458088}
+  m_LocalRotation: {x: -0, y: -0.38149375, z: -0, w: 0.9243715}
+  m_LocalPosition: {x: 9.58, y: -0.11628485, z: -63.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: -44.852, z: 0}
+--- !u!65 &1737361163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737458088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &1737458088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1736973704}
+  - component: {fileID: 1737361163}
+  - component: {fileID: 1737458089}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1737458089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737458088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1751660863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8843,6 +10007,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3607882, y: 2.3817058, z: 10.18041}
   m_Center: {x: 0.0000038146973, y: 1.1908493, z: -4.909811}
+--- !u!4 &1783797797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783956485}
+  m_LocalRotation: {x: 0.010062444, y: 0.99938893, z: -0.0016218179, w: -0.03343659}
+  m_LocalPosition: {x: -18.708445, y: -0.25498915, z: -22.523232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: -8.246, z: 0}
+--- !u!65 &1783923368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783956485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
+--- !u!1 &1783956485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1783797797}
+  - component: {fileID: 1783923368}
+  - component: {fileID: 1783956486}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1783956486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783956485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1785510036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9004,6 +10225,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.36078814, y: 2.3817058, z: 10.1804085}
   m_Center: {x: 0, y: 1.1908493, z: -4.9098167}
+--- !u!4 &1805247874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805547938}
+  m_LocalRotation: {x: -0, y: -0.18147328, z: -0, w: 0.98339593}
+  m_LocalPosition: {x: -17.3, y: -0.11628485, z: -89.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: -20.911001, z: 0}
+--- !u!1 &1805547938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805247874}
+  - component: {fileID: 1805647621}
+  - component: {fileID: 1805547939}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1805547939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805547938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1805647621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805547938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1001 &1816781327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9094,6 +10372,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.36078814, y: 2.3817058, z: 10.1804085}
   m_Center: {x: 0, y: 1.1908493, z: -4.9098167}
+--- !u!4 &1817383311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817480623}
+  m_LocalRotation: {x: -0, y: 0.31764793, z: -0, w: 0.94820875}
+  m_LocalPosition: {x: 16.511997, y: -0.11504984, z: -36.812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 37.041, z: 0}
+--- !u!1 &1817480623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1817383311}
+  - component: {fileID: 1817512722}
+  - component: {fileID: 1817480624}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (36)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1817480624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817480623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1817512722
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817480623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1 &1830747805
 GameObject:
   m_ObjectHideFlags: 0
@@ -9569,6 +10904,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1865765019}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1871915171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872016515}
+  m_LocalRotation: {x: -0, y: -0.7737962, z: -0, w: 0.6334347}
+  m_LocalPosition: {x: 5.3190994, y: -0.11628485, z: -101.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487118693}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: -101.392006, z: 0}
+--- !u!1 &1872016515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871915171}
+  - component: {fileID: 1872048678}
+  - component: {fileID: 1872016516}
+  m_Layer: 0
+  m_Name: Prop_Fence_Brown (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1872016516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872016515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec5aff9d6db04b018b8f38718a20360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1872048678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872016515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36078814, y: 30, z: 10.1804085}
+  m_Center: {x: 0, y: 17.5, z: -4.9098167}
 --- !u!1001 &1877730840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10792,37 +12184,37 @@ PrefabInstance:
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.38771
+      value: 23.387688
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1309824
+      value: 3.1309855
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.928856
+      value: -13.928854
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9728523
+      value: 0.97285223
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.231375
+      value: 0.23137516
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.004778165
+      value: -0.004777006
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0011363986
+      value: 0.0011361237
       objectReference: {fileID: 0}
     - target: {fileID: 1701091822041202523, guid: df85b5f90e1efd8458d32d5b10f3cc79,
         type: 3}
