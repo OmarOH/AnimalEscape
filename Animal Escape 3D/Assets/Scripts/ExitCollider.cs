@@ -14,7 +14,6 @@ public class ExitCollider : MonoBehaviour
             particles.Play();
             GameEvents.current.GameWon();
             GoalieFarmer.instance.KnockOver();
-            //gameObject.SetActive(false);
         }
     }
 }

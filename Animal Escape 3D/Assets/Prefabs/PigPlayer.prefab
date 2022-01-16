@@ -424,7 +424,6 @@ GameObject:
   - component: {fileID: 6346315193079544506}
   - component: {fileID: 2116254916}
   - component: {fileID: 1919288213262334501}
-  - component: {fileID: 4850911462247413343}
   - component: {fileID: 4959214591423321603}
   - component: {fileID: 6514966428712279678}
   m_Layer: 0
@@ -486,7 +485,6 @@ MonoBehaviour:
   child: {fileID: 4521093586459945095}
   jumpForce: 6
   minimalSwipeDistance: 500
-  speed: 6
   timeToSwipe: 0.5
   animator: {fileID: 1919288213262334501}
   isCaught: 0
@@ -502,21 +500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44cf6124af3b5e4f9264507dc4083fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4850911462247413343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6346315193079544510}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2c1b28c0e96e9740a88f32b6e8b69ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1919288213262334501}
-  rigidbody: {fileID: 4959214591423321603}
-  isCaught: 0
 --- !u!54 &4959214591423321603
 Rigidbody:
   m_ObjectHideFlags: 0

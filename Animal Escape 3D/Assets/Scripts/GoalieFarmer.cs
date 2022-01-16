@@ -79,6 +79,17 @@ public class GoalieFarmer : MonoBehaviour
             StartCoroutine(ResetPlayerScript(collision.gameObject));
             Vector3 dir = -(gameObject.transform.position - collision.gameObject.transform.position);
             collision.gameObject.GetComponent<Rigidbody>().AddForce(dir * multiplier / 2, ForceMode.Impulse);
+            //Turn trail child off
+            foreach (Transform tr in player.transform)
+            {
+                if (tr.tag == "Trail")
+                {
+                    tr.gameObject.GetComponent<ParticleSystem>().Pause();
+                }
+            }
+            //Animation changes in the air
+            player.GetComponent<MovementAnimations>().SetAnimation(player.gameObject, "Idle");
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
             KnockOver();
         }
     }
@@ -90,18 +101,6 @@ public class GoalieFarmer : MonoBehaviour
         rotate = true;
         lerp = false;
 
-        //Turn trail child off
-        foreach (Transform tr in player.transform)
-        {
-            if (tr.tag == "Trail")
-            {
-                tr.gameObject.GetComponent<ParticleSystem>().Pause();
-            }
-        }
-
-        //Animation changes in the air
-        player.GetComponent<MovementAnimations>().SetAnimation(player.gameObject, "Idle");
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
     }
 
     IEnumerator ResetPlayerScript(GameObject pig)

@@ -12,7 +12,7 @@ public class PlayerControleScript : MonoBehaviour
     [HideInInspector] public bool isCaught = false;
     private Vector2 startTouchPos, swipeDelta;
     private Vector3 oldDirection, finnishStartPos;
-    private bool isGrounded, isDraging, jumpAllowed, isJumping;
+    private bool isGrounded, isDragging, jumpAllowed, isJumping;
 
     public static int speed = 8;
     public static bool gameWon;
@@ -37,6 +37,7 @@ public class PlayerControleScript : MonoBehaviour
         speed = 8;
         distToGround = GetComponent<Collider>().bounds.extents.y;
         GameEvents.current.finishTrigger += onGameWon;
+        gameWon = false;
     }
 
     void Update()
@@ -64,14 +65,14 @@ public class PlayerControleScript : MonoBehaviour
         //Standalone inputs
         if (Input.GetMouseButtonDown(0))
         {
-            isDraging = true;
+            isDragging = true;
             startTouchPos = Input.mousePosition;
             CancelInvoke("SwipeTimer");
             Invoke("SwipeTimer", timeToSwipe);
         }
         
         //Calculate the distance
-        if (isDraging)
+        if (isDragging)
         {
             if (Input.GetMouseButton(0))
                 swipeDelta = (Vector2)Input.mousePosition - startTouchPos;
@@ -167,7 +168,7 @@ public class PlayerControleScript : MonoBehaviour
     private void ResetValues()
     {
         startTouchPos = swipeDelta = Vector2.zero;
-        isDraging = false;
+        isDragging = false;
         swipeTimerPassed = false;
         jumpAllowed = false;
     }
