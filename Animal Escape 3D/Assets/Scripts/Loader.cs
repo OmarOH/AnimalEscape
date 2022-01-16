@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Loader : MonoBehaviour
 {
-    public static int totalLevels = 3;
+    public static int totalLevels = 8;
 
     private void Start()
     {
